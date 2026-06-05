@@ -89,9 +89,15 @@
   .df-footer p { font-size: 12px; color: #9b6b78; margin: 0; }
 
   html { scroll-behavior: smooth; }
+
+  .df-pricing-toggle { display: flex; gap: 4px; background: #f0e8e2; border: 1px solid #e8ddd5; border-radius: 50px; padding: 4px; width: fit-content; margin: 0 auto 2.5rem; }
+  .df-pricing-toggle button { border: none; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #9b6b78; padding: 8px 18px; border-radius: 50px; cursor: pointer; transition: background 0.2s, color 0.2s; display: flex; align-items: center; gap: 6px; }
+  .df-pricing-toggle button.active { background: #5c2d3e; color: #faf6f1; }
+  .df-save-badge { font-size: 10px; background: #c4a0ac; color: #3a1d29; padding: 2px 7px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px; }
+  .df-pricing-toggle button.active .df-save-badge { background: #faf6f1; color: #5c2d3e; }
 </style>
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
 <div class="df-wrap">
   <nav class="df-nav">
     <a href="#hero" class="df-logo">DoulaFlow</a>
@@ -102,7 +108,7 @@
     </div>
     <div class="df-nav-right">
       <a href="https://app.mydoulaflow.com" class="df-nav-login">Log in</a>
-      <a href="#waitlist" class="df-nav-cta">Join the waitlist</a>
+      <a href="#waitlist" class="df-nav-cta">Request A Demo</a>
     </div>
   </nav>
 
@@ -112,7 +118,7 @@
       <h1 class="df-h1">Your practice,<br><em>finally organized.</em></h1>
       <p class="df-subhead">Stop juggling notebooks, Google Drive folders, and sticky notes. DoulaFlow keeps every client, appointment, and document in one calm, beautiful place.</p>
       <div class="df-hero-actions">
-        <a href="#waitlist" class="df-btn-primary">Join the waitlist</a>
+        <a href="#waitlist" class="df-btn-primary">Request A Demo</a>
         <a href="#features" class="df-btn-ghost">See how it works</a>
       </div>
     </div>
@@ -170,6 +176,21 @@
     <p class="df-section-sub">Built for solo doulas and small practices. No 40-page onboarding guide required.</p>
     <div class="df-grid">
       <div class="df-card">
+        <div class="df-card-icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
+        <h3>Client portal</h3>
+        <p>Give clients their own private space for appointments, documents, and a sweet week-by-week look at baby's growth. A touch most doula tools simply don't have.</p>
+      </div>
+      <div class="df-card">
+        <div class="df-card-icon"><i class="ti ti-messages" aria-hidden="true"></i></div>
+        <h3>Client messaging</h3>
+        <p>Message clients right in the app, all in one thread. No more digging through scattered texts and emails.</p>
+      </div>
+      <div class="df-card">
+        <div class="df-card-icon"><i class="ti ti-clipboard-list" aria-hidden="true"></i></div>
+        <h3>Intake forms</h3>
+        <p>Send a link. Client fills it out. It shows up in their profile automatically. Done.</p>
+      </div>
+      <div class="df-card">
         <div class="df-card-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
         <h3>Client management</h3>
         <p>Every client's details, appointments, notes, and documents in one profile. No more hunting.</p>
@@ -178,11 +199,6 @@
         <div class="df-card-icon"><i class="ti ti-calendar" aria-hidden="true"></i></div>
         <h3>Calendar & appointments</h3>
         <p>See your full schedule at a glance. Schedule prenatal visits, postnatal check-ins, and more.</p>
-      </div>
-      <div class="df-card">
-        <div class="df-card-icon"><i class="ti ti-clipboard-list" aria-hidden="true"></i></div>
-        <h3>Intake forms</h3>
-        <p>Send a link. Client fills it out. It shows up in their profile automatically. Done.</p>
       </div>
       <div class="df-card">
         <div class="df-card-icon"><i class="ti ti-package" aria-hidden="true"></i></div>
@@ -199,6 +215,11 @@
         <h3>Invoicing</h3>
         <p>Generate and send professional invoices directly from the app. No more manual PDF exports.</p>
       </div>
+      <div class="df-card">
+        <div class="df-card-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
+        <h3>Reports</h3>
+        <p>See your practice at a glance: clients, revenue, and activity. Included, not a paid add-on.</p>
+      </div>
     </div>
   </section>
 
@@ -206,42 +227,50 @@
     <p class="df-section-label">Pricing</p>
     <h2 class="df-section-title">Simple, honest pricing</h2>
     <p class="df-section-sub">No contracts. No surprise fees. Cancel anytime.</p>
+    <div class="df-pricing-toggle">
+      <button data-period="monthly" class="active" onclick="dfSetBilling('monthly')">Monthly</button>
+      <button data-period="annual" onclick="dfSetBilling('annual')">Annual <span class="df-save-badge">2 MONTHS FREE</span></button>
+    </div>
     <div class="df-pricing-grid">
       <div class="df-price-card">
         <div class="df-price-tag">Solo doula</div>
         <div class="df-price-name">Essentials</div>
-        <div class="df-price-amount">$19<span>/month</span></div>
+        <div class="df-price-amount" data-monthly="$19<span>/month</span>" data-annual="$190<span>/year</span>">$19<span>/month</span></div>
         <div class="df-price-desc">For independent practitioners</div>
         <ul class="df-price-features">
           <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited clients</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Calendar & scheduling</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Intake forms</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Client Messaging</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Documents & invoicing</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Reports</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> 50 signed documents / year</li>
         </ul>
-        <button class="df-price-btn ghost" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+        <button class="df-price-btn ghost" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Sign up for a demo</button>
       </div>
       <div class="df-price-card featured">
         <div class="df-price-tag">Practice / collective</div>
         <div class="df-price-name">Practice</div>
-        <div class="df-price-amount">$69<span>/month</span></div>
-        <div class="df-price-desc">Up to 5 doulas, shared clients</div>
+        <div class="df-price-amount" data-monthly="$29<span>/month</span>" data-annual="$290<span>/year</span>">$29<span>/month</span></div>
+        <div class="df-price-desc" data-monthly="Starts at 2 doulas &middot; +$10/mo per added doula" data-annual="Starts at 2 doulas &middot; +$100/yr per added doula">Starts at 2 doulas &middot; +$10/mo per added doula</div>
         <ul class="df-price-features">
           <li><i class="ti ti-check" aria-hidden="true"></i> Everything in Essentials</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Multi-doula access</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Pay only for the seats you use</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Shared client records</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Admin controls</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> 50 signed documents per doula / year</li>
         </ul>
-        <button class="df-price-btn primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+        <button class="df-price-btn primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Sign up for a demo</button>
       </div>
     </div>
   </section>
 
   <section id="waitlist" class="df-cta">
-    <h2>Ready to clear the clutter?</h2>
-    <p>Join the waitlist and be first to know when DoulaFlow opens its doors.</p>
+    <h2>See DoulaFlow in action</h2>
+    <p>Drop your email and we'll set up a personal demo and get you onboarded.</p>
     <div class="df-email-row">
       <input type="email" placeholder="your@email.com" />
-      <button>Get early access</button>
+      <button>Request a demo</button>
     </div>
   </section>
 
@@ -250,3 +279,13 @@
     <p>© 2026 Emberforge Labs · Built with care in Chattanooga, TN</p>
   </footer>
 </div>
+<script>
+  function dfSetBilling(period){
+    document.querySelectorAll('.df-pricing-toggle button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.period === period);
+    });
+    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-desc[data-monthly]').forEach(function(el){
+      el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
+    });
+  }
+</script>
