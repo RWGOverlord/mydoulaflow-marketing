@@ -84,6 +84,10 @@
   .df-email-row { display: flex; gap: 10px; justify-content: center; max-width: 420px; margin: 0 auto; }
   .df-email-row input { flex: 1; padding: 13px 18px; border-radius: 50px; border: 1.5px solid #c4a0ac; font-family: 'DM Sans', sans-serif; font-size: 14px; background: #fff; color: #2c1a1a; outline: none; }
   .df-email-row button { background: #5c2d3e; color: #faf6f1; border: none; padding: 13px 22px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+  .df-name-row { max-width: 420px; margin: 0 auto 10px; }
+  .df-name-row input { width: 100%; padding: 13px 18px; border-radius: 50px; border: 1.5px solid #c4a0ac; font-family: 'DM Sans', sans-serif; font-size: 14px; background: #fff; color: #2c1a1a; outline: none; }
+  .df-form-err { font-size: 13px; color: #9b4040; margin-top: 0.6rem; min-height: 1.4em; }
+  .df-cta-success p { font-size: 17px; color: #5c2d3e; font-weight: 500; }
 
   .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; background: #faf6f1; }
   .df-footer-logo { display: inline-flex; align-items: center; }
@@ -106,6 +110,8 @@
     <div class="df-nav-links">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
+      <a href="/about-us">About</a>
+      <a href="/blog">Blog</a>
       <a href="#waitlist">Early access</a>
     </div>
     <div class="df-nav-right">
@@ -270,15 +276,31 @@
   <section id="waitlist" class="df-cta">
     <h2>See DoulaFlow in action</h2>
     <p>Drop your email and we'll set up a personal demo and get you onboarded.</p>
-    <div class="df-email-row">
-      <input type="email" placeholder="your@email.com" />
-      <button>Request a demo</button>
+    <div id="demoForm">
+      <div class="df-name-row">
+        <input type="text" id="demoName" placeholder="Your name" autocomplete="name" />
+      </div>
+      <div class="df-email-row">
+        <input type="email" id="demoEmail" placeholder="your@email.com" autocomplete="email" />
+        <button id="demoBtn" onclick="submitDemo()">Request a demo</button>
+      </div>
+      <input type="text" id="demoHoneypot" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+      <p class="df-form-err" id="demoErr"></p>
+    </div>
+    <div id="demoSuccess" style="display:none" class="df-cta-success">
+      <p>Thanks! We'll reach out shortly to set up your demo.</p>
     </div>
   </section>
 
   <footer class="df-footer">
     <div class="df-footer-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></div>
-    <p>© 2026 Emberforge Labs · Built with care in Chattanooga, TN</p>
+    <div style="display:flex;gap:1.5rem;align-items:center;">
+      <a href="#features" style="font-size:13px;color:#9b6b78;text-decoration:none;">Features</a>
+      <a href="#pricing" style="font-size:13px;color:#9b6b78;text-decoration:none;">Pricing</a>
+      <a href="/about-us" style="font-size:13px;color:#9b6b78;text-decoration:none;">About</a>
+      <a href="/blog" style="font-size:13px;color:#9b6b78;text-decoration:none;">Blog</a>
+    </div>
+    <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
   </footer>
 </div>
 <script>
@@ -289,5 +311,32 @@
     document.querySelectorAll('.df-price-amount[data-monthly], .df-price-desc[data-monthly]').forEach(function(el){
       el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
     });
+  }
+
+  async function submitDemo() {
+    var name     = document.getElementById('demoName').value.trim();
+    var email    = document.getElementById('demoEmail').value.trim();
+    var honeypot = document.getElementById('demoHoneypot').value;
+    var btn      = document.getElementById('demoBtn');
+    var err      = document.getElementById('demoErr');
+    err.textContent = '';
+    if (!name)  { err.textContent = 'Please enter your name.'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please enter a valid email.'; return; }
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    try {
+      var r = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: 'demo', name: name, email: email, website: honeypot })
+      });
+      if (!r.ok) throw new Error('bad status');
+      document.getElementById('demoForm').style.display = 'none';
+      document.getElementById('demoSuccess').style.display = 'block';
+    } catch (e) {
+      err.textContent = 'Something went wrong — please try again.';
+      btn.disabled = false;
+      btn.textContent = 'Request a demo';
+    }
   }
 </script>

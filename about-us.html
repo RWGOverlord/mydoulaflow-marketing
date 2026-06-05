@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About DoulaFlow — Practice software built for the doula I married</title>
+<meta name="description" content="DoulaFlow is practice-management software a developer built for his wife, Megan — before she took on her first client — so the work she loves never turns into paperwork she dreads. Calm, simple tools made in Chattanooga, TN." />
+<link rel="icon" type="image/png" href="/images/Favicon32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #faf6f1;
+    color: #2c1a1a;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1.1; }
+  em { font-style: italic; color: #5c2d3e; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2.5rem; }
+
+  /* nav */
+  .df-nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(250,246,241,.88); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ddd5; }
+  .df-nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .df-logo { display: inline-flex; align-items: center; }
+  .df-logo img { height: 30px; width: auto; display: block; }
+  .df-nav-links { display: flex; gap: 2rem; align-items: center; font-size: 14px; }
+  .df-nav-links a { color: #6b4a52; transition: color .2s; font-weight: 400; }
+  .df-nav-links a:hover { color: #5c2d3e; }
+  .df-nav-right { display: flex; gap: 0.75rem; align-items: center; }
+  .df-nav-login { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; padding: 9px 20px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; }
+  .df-nav-cta { background: #5c2d3e; color: #faf6f1; border: none; padding: 10px 22px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+  @media (max-width: 820px) { .df-nav-links { display: none; } .df-nav-login { display: none; } }
+
+  /* hero */
+  .hero { padding: 88px 0 64px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: -140px; left: 50%; transform: translateX(-50%); width: 680px; height: 420px; background: radial-gradient(ellipse at center, #f0e8e2, transparent 70%); opacity: .8; z-index: 0; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #9b6b78; margin-bottom: 1.25rem; }
+  .hero h1 { font-size: clamp(38px, 5.5vw, 62px); max-width: 14ch; margin: 0 auto 1.25rem; }
+  .hero p { font-size: 19px; color: #6b4a52; max-width: 52ch; margin: 0 auto 2rem; font-weight: 300; }
+  .pillrow { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+  .pill { background: #f0e8e2; border: 1px solid #e8ddd5; border-radius: 50px; padding: 9px 18px; font-size: 14px; font-weight: 500; color: #6b4a52; }
+
+  /* story */
+  .story { background: #f0e8e2; padding: 72px 0; }
+  .story .wrap { max-width: 760px; }
+  .section-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #9b6b78; margin-bottom: 1rem; }
+  .story h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 1.75rem; max-width: 18ch; }
+  .story p { font-size: 18px; color: #2c1a1a; margin-bottom: 1.25rem; font-weight: 300; }
+  .story p.lead { font-size: 20px; font-weight: 400; }
+  .placeholder { background: rgba(92,45,62,.08); border: 1px dashed #c4a0ac; border-radius: 6px; padding: 1px 7px; font-size: .9em; color: #5c2d3e; font-weight: 500; font-family: 'DM Sans', sans-serif; }
+
+  /* mission */
+  .mission { padding: 72px 0; text-align: center; }
+  .mission .wrap { max-width: 840px; }
+  .mission .section-eyebrow { color: #5c2d3e; }
+  .mission h2 { font-size: clamp(26px, 3.8vw, 38px); line-height: 1.2; }
+
+  /* values */
+  .values { background: #2c1a1a; color: #faf6f1; padding: 72px 0; }
+  .values .section-eyebrow { color: #c4a0ac; }
+  .values h2 { color: #faf6f1; font-size: clamp(26px, 4vw, 38px); margin-bottom: 0.5rem; }
+  .values .sub { color: rgba(250,246,241,.6); margin-bottom: 3rem; font-size: 17px; font-weight: 300; }
+  .vgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .vcard { background: rgba(250,246,241,.05); border: 1px solid rgba(250,246,241,.12); border-radius: 14px; padding: 1.75rem 1.5rem; }
+  .vcard .vi { width: 42px; height: 42px; border-radius: 11px; background: #5c2d3e; margin-bottom: 1.1rem; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .vcard h3 { font-size: 19px; color: #faf6f1; margin-bottom: 0.5rem; }
+  .vcard p { font-size: 14px; color: rgba(250,246,241,.6); line-height: 1.55; font-weight: 300; }
+  @media (max-width: 820px) { .vgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .vgrid { grid-template-columns: 1fr; } }
+
+  /* built with doulas */
+  .withdoulas { padding: 72px 0; }
+  .withdoulas .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .withdoulas h2 { font-size: clamp(26px, 3.8vw, 40px); margin-bottom: 1.25rem; max-width: 14ch; }
+  .withdoulas p { font-size: 17px; color: #6b4a52; margin-bottom: 1.1rem; font-weight: 300; }
+  .quote-card { background: #f0e8e2; border: 1px solid #e8ddd5; border-radius: 14px; padding: 2rem 2.25rem; box-shadow: 0 8px 32px rgba(92,45,62,.10); }
+  .quote-card .q { font-family: 'Playfair Display', serif; font-size: 20px; line-height: 1.45; margin-bottom: 1.5rem; }
+  .quote-card .who { display: flex; align-items: center; gap: 14px; }
+  .quote-card .av { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #c4a0ac, #9b6b78); flex-shrink: 0; }
+  .quote-card .who b { font-weight: 600; display: block; font-size: 15px; }
+  .quote-card .who span { font-size: 13px; color: #9b6b78; }
+  @media (max-width: 820px) { .withdoulas .wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  /* team */
+  .team { background: #f0e8e2; padding: 72px 0; text-align: center; }
+  .team h2 { font-size: clamp(26px, 3.8vw, 38px); margin-bottom: 0.5rem; }
+  .team .sub { color: #6b4a52; margin-bottom: 3rem; font-size: 17px; font-weight: 300; }
+  .tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .tcard { background: #faf6f1; border: 1px solid #e8ddd5; border-radius: 14px; padding: 1.75rem 1.5rem; }
+  .tcard .av { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.1rem; background: linear-gradient(135deg, #f0e8e2, #c4a0ac); border: 3px solid #faf6f1; }
+  .tcard b { font-size: 18px; font-weight: 600; display: block; }
+  .tcard span { font-size: 13px; color: #9b6b78; font-weight: 500; }
+  .tcard p { font-size: 14px; color: #6b4a52; margin-top: 0.75rem; line-height: 1.55; font-weight: 300; }
+  @media (max-width: 820px) { .tgrid { grid-template-columns: 1fr; } }
+
+  /* cta band */
+  .ctaband { text-align: center; padding: 80px 0; }
+  .ctaband h2 { font-size: clamp(28px, 4.5vw, 46px); margin-bottom: 1rem; }
+  .ctaband p { font-size: 18px; color: #6b4a52; max-width: 48ch; margin: 0 auto 2rem; font-weight: 300; }
+  .df-btn-primary { background: #5c2d3e; color: #faf6f1; border: none; padding: 14px 28px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; }
+  .df-btn-ghost { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; padding: 13px 24px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 400; cursor: pointer; text-decoration: none; display: inline-block; }
+
+  /* footer */
+  .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #faf6f1; }
+  .df-footer-logo img { height: 20px; width: auto; display: block; }
+  .df-footer-links { display: flex; gap: 1.5rem; align-items: center; }
+  .df-footer-links a { font-size: 13px; color: #9b6b78; text-decoration: none; }
+  .df-footer-links a:hover { color: #5c2d3e; }
+  .df-footer p { font-size: 12px; color: #9b6b78; margin: 0; }
+</style>
+</head>
+<body>
+
+<div class="df-nav-wrap">
+  <div class="wrap">
+    <nav class="df-nav">
+      <a href="/" class="df-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></a>
+      <div class="df-nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/about-us">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/#waitlist">Early access</a>
+      </div>
+      <div class="df-nav-right">
+        <a href="https://app.mydoulaflow.com" class="df-nav-login">Log in</a>
+        <a href="/#waitlist" class="df-nav-cta">Request A Demo</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Our Story</div>
+    <h1>I didn't hire a doula. I <em>married</em> one.</h1>
+    <p>DoulaFlow wasn't built from market research. I built it for my wife, Megan — before she'd taken on a single client — so the work she loves would never turn into the paperwork she dreads.</p>
+    <div class="pillrow">
+      <span class="pill">Built for my wife first</span>
+      <span class="pill">Before her first client</span>
+      <span class="pill">Made in Chattanooga, TN</span>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section class="story">
+  <div class="wrap">
+    <div class="section-eyebrow">A note from the founder</div>
+    <h2>It started before Megan had a single client.</h2>
+    <p class="lead">My wife, Megan, did everything right to launch her doula practice. She read the books, built her website and branding, went to the meetups, found a mentor. Then she walked me through how she planned to run it — contracts, birth plans, resource packets, a stack of paperwork printed for every family — all wired together in Airtable.</p>
+    <p>Megan is one of the most organized people I know. And even her setup meant juggling Google Drive, Calendar, Calendly, SignWell, Airtable, Adobe, and a Notepad — for a business that didn't have a single client yet. I'm a systems person by trade, and I could already see the headaches waiting at ten, fifteen, twenty clients a year.</p>
+    <p>In our life together, anything that touches money or business — taxes, bills, insurance, contracts — is mine to carry, so Megan can pour herself into what she's actually here for. I wanted her business to feel the same way. I didn't want her to fall in love with this work and then quietly come to resent it because the admin kept piling up around it.</p>
+    <p>So I built her the tool before she had her first client — so she'd never have to migrate a tangle of spreadsheets into something new, and never have to think about the plumbing at all. (And the printed packets she loves? Those stay — the personal touch was never the problem.)</p>
+    <p>Megan stays home with our three kids — soon to be more — and makes our house a home. Taking one more thing off her plate was the least I could do. That's what gave birth to DoulaFlow. It's still built to one standard: <em>would it make Megan's work easier?</em> If it would, it ships. If it wouldn't, it doesn't.</p>
+    <p style="font-family:'Playfair Display',serif;font-size:20px;margin-top:0.5rem">Erick<span style="font-family:'DM Sans',sans-serif;font-size:14px;color:#9b6b78;font-weight:300"> · Founder, DoulaFlow</span></p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="wrap">
+    <div class="section-eyebrow">Our Mission</div>
+    <h2>Doulas show up for families during one of life's biggest moments. DoulaFlow's job is to handle everything <em>around</em> that moment — so you can be fully present for it.</h2>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="wrap">
+    <div class="section-eyebrow">What we believe</div>
+    <h2>A few things we won't compromise on</h2>
+    <p class="sub">These shaped every decision in the product.</p>
+    <div class="vgrid">
+      <div class="vcard">
+        <div class="vi"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+        <h3>Calm by design</h3>
+        <p>Software shouldn't add to your stress. Every screen is built to feel quiet, clear, and uncluttered.</p>
+      </div>
+      <div class="vcard">
+        <div class="vi"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+        <h3>Built with a doula</h3>
+        <p>Shaped around how a real working doula actually practices — starting with the one I married, and every doula who tries it next.</p>
+      </div>
+      <div class="vcard">
+        <div class="vi"><i class="ti ti-coin" aria-hidden="true"></i></div>
+        <h3>Honest pricing</h3>
+        <p>No contracts, no surprise fees, no holding basic features hostage behind an upsell.</p>
+      </div>
+      <div class="vcard">
+        <div class="vi"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+        <h3>Just enough</h3>
+        <p>Everything your practice needs, nothing it doesn't. No 40-page onboarding required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILT WITH DOULAS -->
+<section class="withdoulas">
+  <div class="wrap">
+    <div>
+      <div class="section-eyebrow">By doulas, for doulas</div>
+      <h2>Shaped by the doula who uses it most.</h2>
+      <p>DoulaFlow started with one practice — Megan's. Every form, every screen, every workflow was tested against how she actually works, not how a software company assumes a doula should.</p>
+      <p>Now we want it shaped by more of you. We're a small operation in Chattanooga that reads every message, and the fastest way to change the product is to tell us what's slowing you down.</p>
+      <a href="/#waitlist" class="df-btn-primary" style="margin-top:0.75rem">Share your feedback</a>
+    </div>
+    <div class="quote-card">
+      <div class="q">"I'd mention something that was driving me crazy, and he'd have it fixed by morning. It actually feels like the tool is <em>on my side.</em>"</div>
+      <div class="who">
+        <div class="av"></div>
+        <div>
+          <b>Megan</b>
+          <span>Doula &amp; co-founder, DoulaFlow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="wrap">
+    <div class="section-eyebrow" style="color:#5c2d3e">The people behind it</div>
+    <h2>A two-person team that cares about your evenings</h2>
+    <p class="sub">You pour yourself into your clients. We pour ourselves into making the rest disappear.</p>
+    <div class="tgrid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px;margin:0 auto">
+      <div class="tcard">
+        <div class="av"></div>
+        <b>Erick</b>
+        <span>Founder</span>
+        <p>Systems person, husband, and dad. Handles the business side so Megan never has to — and now builds that same support for every doula.</p>
+      </div>
+      <div class="tcard">
+        <div class="av"></div>
+        <b>Megan</b>
+        <span>Co-founder &amp; Doula</span>
+        <p>The doula DoulaFlow was built for. If a feature wouldn't make her practice easier, it doesn't make it into yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="wrap">
+    <h2>Come see what calm looks like.</h2>
+    <p>Drop your email and we'll set up a personal demo and get you onboarded — no pressure, no contracts.</p>
+    <a href="/#waitlist" class="df-btn-primary" style="font-size:16px;padding:14px 30px">Request a Demo</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="df-footer">
+  <div class="df-footer-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></div>
+  <div class="df-footer-links">
+    <a href="/#features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/about-us">About</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.mydoulaflow.com">Log in</a>
+  </div>
+  <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
+</footer>
+
+</body>
+</html>
