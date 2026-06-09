@@ -67,7 +67,7 @@
   .hero { padding: 88px 0 64px; text-align: center; position: relative; overflow: hidden; }
   .hero::before { content: ""; position: absolute; top: -140px; left: 50%; transform: translateX(-50%); width: 680px; height: 420px; background: radial-gradient(ellipse at center, #f0e8e2, transparent 70%); opacity: .8; z-index: 0; }
   .hero .wrap { position: relative; z-index: 1; }
-  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #9b6b78; margin-bottom: 1.25rem; }
+  .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #7d5360; margin-bottom: 1.25rem; }
   .hero h1 { font-size: clamp(38px, 5.5vw, 62px); max-width: 14ch; margin: 0 auto 1.25rem; }
   .hero p { font-size: 19px; color: #6b4a52; max-width: 52ch; margin: 0 auto 2rem; font-weight: 300; }
   .pillrow { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
@@ -76,7 +76,7 @@
   /* story */
   .story { background: #f0e8e2; padding: 72px 0; }
   .story .wrap { max-width: 760px; }
-  .section-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #9b6b78; margin-bottom: 1rem; }
+  .section-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #7d5360; margin-bottom: 1rem; }
   .story h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 1.75rem; max-width: 18ch; }
   .story p { font-size: 18px; color: #2c1a1a; margin-bottom: 1.25rem; font-weight: 300; }
   .story p.lead { font-size: 20px; font-weight: 400; }
@@ -111,7 +111,7 @@
   .quote-card .who { display: flex; align-items: center; gap: 14px; }
   .quote-card .av { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #c4a0ac, #9b6b78); flex-shrink: 0; }
   .quote-card .who b { font-weight: 600; display: block; font-size: 15px; }
-  .quote-card .who span { font-size: 13px; color: #9b6b78; }
+  .quote-card .who span { font-size: 13px; color: #7d5360; }
   @media (max-width: 820px) { .withdoulas .wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
 
   /* team */
@@ -122,7 +122,7 @@
   .tcard { background: #faf6f1; border: 1px solid #e8ddd5; border-radius: 14px; padding: 1.75rem 1.5rem; }
   .tcard .av { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1.1rem; background: linear-gradient(135deg, #f0e8e2, #c4a0ac); border: 3px solid #faf6f1; }
   .tcard b { font-size: 18px; font-weight: 600; display: block; }
-  .tcard span { font-size: 13px; color: #9b6b78; font-weight: 500; }
+  .tcard span { font-size: 13px; color: #7d5360; font-weight: 500; }
   .tcard p { font-size: 14px; color: #6b4a52; margin-top: 0.75rem; line-height: 1.55; font-weight: 300; }
   @media (max-width: 820px) { .tgrid { grid-template-columns: 1fr; } }
 
@@ -137,9 +137,11 @@
   .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #faf6f1; }
   .df-footer-logo img { height: 20px; width: auto; display: block; }
   .df-footer-links { display: flex; gap: 1.5rem; align-items: center; }
-  .df-footer-links a { font-size: 13px; color: #9b6b78; text-decoration: none; }
+  .df-footer-links a { font-size: 13px; color: #7d5360; text-decoration: none; }
   .df-footer-links a:hover { color: #5c2d3e; }
-  .df-footer p { font-size: 12px; color: #9b6b78; margin: 0; }
+  .df-footer p { font-size: 12px; color: #7d5360; margin: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #5c2d3e; outline-offset: 2px; }
+  input:focus { outline: none; border-color: #5c2d3e; box-shadow: 0 0 0 3px rgba(92,45,62,0.18); }
 </style>
 </head>
 <body>
@@ -188,7 +190,7 @@
     <p>In our life together, anything that touches money or business — taxes, bills, insurance, contracts — is mine to carry, so Megan can pour herself into what she's actually here for. I wanted her business to feel the same way. I didn't want her to fall in love with this work and then quietly come to resent it because the admin kept piling up around it.</p>
     <p>So I built her the tool before she had her first client — so she'd never have to migrate a tangle of spreadsheets into something new, and never have to think about the plumbing at all. (And the printed packets she loves? Those stay — the personal touch was never the problem.)</p>
     <p>Megan stays home with our three kids — soon to be more — and makes our house a home. Taking one more thing off her plate was the least I could do. That's what gave birth to DoulaFlow. It's still built to one standard: <em>would it make Megan's work easier?</em> If it would, it ships. If it wouldn't, it doesn't.</p>
-    <p style="font-family:'Playfair Display',serif;font-size:20px;margin-top:0.5rem">Erick<span style="font-family:'DM Sans',sans-serif;font-size:14px;color:#9b6b78;font-weight:300"> · Founder, DoulaFlow</span></p>
+    <p style="font-family:'Playfair Display',serif;font-size:20px;margin-top:0.5rem">Erick<span style="font-family:'DM Sans',sans-serif;font-size:14px;color:#7d5360;font-weight:300"> · Founder, DoulaFlow</span></p>
   </div>
 </section>
 

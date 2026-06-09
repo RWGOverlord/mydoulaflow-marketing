@@ -50,7 +50,7 @@
   .cat-badge { display: inline-block; background: #f0e8e2; color: #5c2d3e; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 50px; margin-bottom: 1.25rem; text-decoration: none; }
   .cat-badge:hover { background: #e8ddd5; }
   .post-header h1 { font-size: clamp(30px, 4.5vw, 48px); margin-bottom: 1.25rem; }
-  .post-meta { font-size: 14px; color: #9b6b78; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .post-meta { font-size: 14px; color: #7d5360; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
   .post-meta .av { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #c4a0ac, #9b6b78); display: inline-block; flex-shrink: 0; }
   .post-divider { border: none; border-top: 1px solid #e8ddd5; margin: 2rem 0; }
 
@@ -69,9 +69,11 @@
   .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #faf6f1; }
   .df-footer-logo img { height: 20px; width: auto; display: block; }
   .df-footer-links { display: flex; gap: 1.5rem; }
-  .df-footer-links a { font-size: 13px; color: #9b6b78; }
+  .df-footer-links a { font-size: 13px; color: #7d5360; }
   .df-footer-links a:hover { color: #5c2d3e; }
-  .df-footer p { font-size: 12px; color: #9b6b78; margin: 0; }
+  .df-footer p { font-size: 12px; color: #7d5360; margin: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #5c2d3e; outline-offset: 2px; }
+  input:focus { outline: none; border-color: #5c2d3e; box-shadow: 0 0 0 3px rgba(92,45,62,0.18); }
 </style>
 </head>
 <body>
@@ -103,6 +105,10 @@
     <div class="post-meta">
       <span class="av"></span>
       <span>By <strong>The DoulaFlow Team</strong></span>
+      <span aria-hidden="true">·</span>
+      <time datetime="2026-05-28">May 28, 2026</time>
+      <span aria-hidden="true">·</span>
+      <span>9 min read</span>
     </div>
   </header>
   <hr class="post-divider">
@@ -246,6 +252,7 @@
     <a href="/#pricing">Pricing</a>
     <a href="/about-us">About</a>
     <a href="/blog">Blog</a>
+    <a href="/privacy-policy">Privacy</a>
     <a href="https://app.mydoulaflow.com">Log in</a>
   </div>
   <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
