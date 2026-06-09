@@ -1,3 +1,12 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJJ382F1L0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PJJ382F1L0');
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
 
@@ -101,6 +110,10 @@
   .df-pricing-toggle button.active { background: #5c2d3e; color: #faf6f1; }
   .df-save-badge { font-size: 10px; background: #c4a0ac; color: #3a1d29; padding: 2px 7px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px; }
   .df-pricing-toggle button.active .df-save-badge { background: #faf6f1; color: #5c2d3e; }
+
+  .df-demo { padding: 4rem 2.5rem; background: #f0e8e2; text-align: center; }
+  .df-demo-frame { max-width: 860px; margin: 1.5rem auto 0; border-radius: 16px; overflow: hidden; border: 1px solid #e8ddd5; box-shadow: 0 14px 44px rgba(92,45,62,0.14); background: #2c1a1a; line-height: 0; }
+  .df-demo-frame video { width: 100%; display: block; }
 </style>
 <link rel="icon" type="image/png" href="images/Favicon32x32.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
@@ -231,6 +244,17 @@
     </div>
   </section>
 
+  <section id="demo" class="df-demo">
+    <p class="df-section-label">See it in action</p>
+    <h2 class="df-section-title">A quick look at DoulaFlow</h2>
+    <div class="df-demo-frame">
+      <video controls preload="metadata" playsinline poster="images/VideoCover.png">
+        <source src="videos/DoulaFlow_Demo_01.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="videos/DoulaFlow_Demo_01.mp4">Download the demo</a> instead.
+      </video>
+    </div>
+  </section>
+
   <section id="pricing" class="df-pricing">
     <p class="df-section-label">Pricing</p>
     <h2 class="df-section-title">Simple, honest pricing</h2>
@@ -299,6 +323,7 @@
       <a href="#pricing" style="font-size:13px;color:#9b6b78;text-decoration:none;">Pricing</a>
       <a href="/about-us" style="font-size:13px;color:#9b6b78;text-decoration:none;">About</a>
       <a href="/blog" style="font-size:13px;color:#9b6b78;text-decoration:none;">Blog</a>
+      <a href="/privacy-policy" style="font-size:13px;color:#9b6b78;text-decoration:none;">Privacy</a>
     </div>
     <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
   </footer>
