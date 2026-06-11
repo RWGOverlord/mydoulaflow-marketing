@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJJ382F1L0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PJJ382F1L0');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — DoulaFlow</title>
+<meta name="description" content="The terms that govern your access to and use of the DoulaFlow platform." />
+<link rel="icon" type="image/png" href="images/Favicon32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #faf6f1;
+    color: #2c1a1a;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1.15; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2.5rem; }
+
+  /* nav */
+  .df-nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(250,246,241,.88); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ddd5; }
+  .df-nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .df-logo { display: inline-flex; align-items: center; }
+  .df-logo img { height: 30px; width: auto; display: block; }
+  .df-nav-links { display: flex; gap: 2rem; align-items: center; font-size: 14px; }
+  .df-nav-links a { color: #6b4a52; transition: color .2s; font-weight: 400; }
+  .df-nav-links a:hover { color: #5c2d3e; }
+  .df-nav-right { display: flex; gap: 0.75rem; align-items: center; }
+  .df-nav-login { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; padding: 9px 20px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; }
+  .df-nav-cta { background: #5c2d3e; color: #faf6f1; border: none; padding: 10px 22px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+  .df-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: #5c2d3e; line-height: 0; }
+  .df-nav-ml { display: none; }
+  @media (max-width: 820px) {
+    .df-nav-toggle { display: inline-flex; align-items: center; }
+    .df-nav-login { display: none; }
+    .df-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: rgba(250,246,241,0.98); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e8ddd5; padding: 0.5rem 0;
+      box-shadow: 0 12px 28px rgba(92,45,62,0.10);
+    }
+    .df-nav-wrap.menu-open .df-nav-links { display: flex; }
+    .df-nav-links a { padding: 0.9rem 1.5rem; font-size: 16px; }
+    .df-nav-ml { display: block; border-top: 1px solid #e8ddd5; margin-top: 0.4rem; padding-top: 1rem; }
+  }
+
+  /* legal content */
+  .legal { padding: 72px 0 80px; }
+  .legal .wrap { max-width: 760px; }
+  .legal .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #7d5360; margin-bottom: 1rem; }
+  .legal h1 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 0.75rem; }
+  .legal .updated { font-size: 14px; color: #7d5360; margin-bottom: 2.5rem; }
+  .legal h2 { font-size: clamp(22px, 3vw, 28px); margin: 2.5rem 0 1rem; }
+  .legal h3 { font-size: clamp(18px, 2.4vw, 21px); margin: 1.75rem 0 0.75rem; }
+  .legal p { color: #2c1a1a; margin-bottom: 1.1rem; font-weight: 300; }
+  .legal ul { margin: 0 0 1.1rem 1.25rem; }
+  .legal li { margin-bottom: 0.5rem; font-weight: 300; }
+  .legal a.link { color: #5c2d3e; font-weight: 500; border-bottom: 1px solid #c4a0ac; }
+  .legal a.link:hover { color: #2c1a1a; }
+  .legal .caps { font-weight: 400; }
+
+  /* footer */
+  .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #faf6f1; }
+  .df-footer-logo img { height: 20px; width: auto; display: block; }
+  .df-footer-links { display: flex; gap: 1.5rem; align-items: center; }
+  .df-footer-links a { font-size: 13px; color: #7d5360; text-decoration: none; }
+  .df-footer-links a:hover { color: #5c2d3e; }
+  .df-footer p { font-size: 12px; color: #7d5360; margin: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #5c2d3e; outline-offset: 2px; }
+  input:focus { outline: none; border-color: #5c2d3e; box-shadow: 0 0 0 3px rgba(92,45,62,0.18); }
+</style>
+</head>
+<body>
+
+<div class="df-nav-wrap">
+  <div class="wrap">
+    <nav class="df-nav">
+      <a href="/" class="df-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></a>
+      <div class="df-nav-links" onclick="this.closest('.df-nav-wrap').classList.remove('menu-open')">
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/about-us">About</a>
+        <a href="/blog">Blog</a>
+        <a href="https://app.mydoulaflow.com" class="df-nav-ml">Log in</a>
+      </div>
+      <div class="df-nav-right">
+        <button class="df-nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var w=this.closest('.df-nav-wrap');this.setAttribute('aria-expanded',w.classList.toggle('menu-open'))"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="https://app.mydoulaflow.com" class="df-nav-login">Log in</a>
+        <a href="/#waitlist" class="df-nav-cta">Request A Demo</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- LEGAL -->
+<section class="legal">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: June 10, 2026</p>
+
+    <p>These Terms of Service ("Terms") govern your access to and use of DoulaFlow, a software platform operated by Emberforge Works, LLC ("DoulaFlow," "we," "us," or "our").</p>
+
+    <p>By creating an account, accessing, or using DoulaFlow, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Services.</p>
+
+    <h2>1. Description of Services</h2>
+    <p>DoulaFlow is a software-as-a-service (SaaS) platform designed to assist doulas and doula practices with business management activities, including but not limited to:</p>
+    <ul>
+      <li>Client management</li>
+      <li>Appointment scheduling</li>
+      <li>Intake forms</li>
+      <li>Documents</li>
+      <li>Messaging</li>
+      <li>Invoicing</li>
+      <li>Birth tracking</li>
+      <li>Client portals</li>
+      <li>Practice management tools</li>
+    </ul>
+    <p>DoulaFlow is software only and does not provide healthcare services, medical advice, legal advice, tax advice, or professional counseling.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>You must be at least eighteen (18) years old and legally capable of entering into binding contracts to use the Services.</p>
+    <p>If you register on behalf of a business, practice, organization, or other legal entity, you represent and warrant that you have authority to bind that entity to these Terms.</p>
+
+    <h2>3. Account Registration</h2>
+    <p>You agree to provide accurate and complete information when creating an account.</p>
+    <p>You are responsible for:</p>
+    <ul>
+      <li>Maintaining the confidentiality of your credentials</li>
+      <li>Restricting access to your account</li>
+      <li>Activities occurring under your account</li>
+    </ul>
+    <p>You must notify us immediately if you suspect unauthorized access.</p>
+
+    <h2>4. Subscription Plans</h2>
+    <p>Access to certain features may require a paid subscription.</p>
+    <p>Subscription plans, pricing, included features, limits, and allowances are described on our website and may change from time to time.</p>
+    <p>Certain features may be subject to:</p>
+    <ul>
+      <li>User limits</li>
+      <li>Storage limits</li>
+      <li>Signature limits</li>
+      <li>Email limits</li>
+      <li>Document limits</li>
+      <li>Usage limits</li>
+    </ul>
+    <p>We may, at our sole discretion, offer complimentary, promotional, or trial access to the Services to certain users. We may modify, condition, or revoke such complimentary access at any time, and complimentary access confers no obligation on us to continue providing the Services without charge.</p>
+
+    <h2>5. Authorized Users</h2>
+    <h3>Individual Plans</h3>
+    <p>Individual plans are intended for use by a single named user.</p>
+    <p>You may not share login credentials with other individuals.</p>
+    <h3>Practice Plans</h3>
+    <p>Practice plans may permit multiple authorized users.</p>
+    <p>The account owner is responsible for all invited users and their activities within the account.</p>
+    <p>Former employees, contractors, or team members should be removed promptly when access is no longer required.</p>
+
+    <h2>6. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Violate any law or regulation</li>
+      <li>Upload malicious code</li>
+      <li>Attempt unauthorized access</li>
+      <li>Interfere with platform security</li>
+      <li>Reverse engineer the Services</li>
+      <li>Resell or sublicense access</li>
+      <li>Use the Services for spam or fraudulent activity</li>
+      <li>Scrape data from the platform</li>
+      <li>Circumvent usage limits</li>
+    </ul>
+    <p>We may suspend or terminate accounts engaged in prohibited conduct.</p>
+
+    <h2>7. User Content</h2>
+    <p>You retain ownership of all data, documents, forms, messages, notes, contracts, and other content you upload or create using the Services.</p>
+    <p>You grant DoulaFlow a limited license to:</p>
+    <ul>
+      <li>Host</li>
+      <li>Store</li>
+      <li>Process</li>
+      <li>Display</li>
+      <li>Transmit</li>
+      <li>Back up</li>
+    </ul>
+    <p>such content solely for the purpose of operating and improving the Services.</p>
+    <p>You represent that you have all necessary rights and permissions to upload such content.</p>
+
+    <h2>8. Client Portal Users</h2>
+    <p>Certain features permit clients of doulas or practices to access information through a client portal.</p>
+    <p>The doula or practice controls client access and permissions.</p>
+    <p>DoulaFlow is not responsible for disputes between users and their clients.</p>
+
+    <h2>9. Data Roles and Responsibilities</h2>
+    <p>As between you and DoulaFlow, <strong>you are the controller</strong> of all client information you collect, enter, store, or transmit using the Services, and <strong>DoulaFlow acts solely as a processor</strong> of that information on your behalf and in accordance with your instructions and these Terms.</p>
+    <p>You are solely responsible for:</p>
+    <ul>
+      <li>Establishing a lawful basis to collect and process your clients' personal information;</li>
+      <li>Obtaining all consents required from your clients, including consent to use DoulaFlow to store, process, and transmit their information;</li>
+      <li>Providing your clients with any privacy notices or disclosures required by applicable law;</li>
+      <li>Determining what client information is appropriate and lawful to collect and store within the Services.</li>
+    </ul>
+    <p>DoulaFlow does not independently use, sell, or disclose client information except as necessary to provide, secure, and operate the Services, or as required by law.</p>
+    <h3>9.1 Minor Data Subjects</h3>
+    <p>You acknowledge that information you enter about your clients may relate to individuals under the age of eighteen (18). For any client who is a minor, you represent and warrant that, before entering that individual's information into the Services, you have obtained all consents required by applicable law, including parental or guardian consent where required.</p>
+
+    <h2>10. Electronic Signatures and Documents</h2>
+    <p>The Services may support electronic signatures, document workflows, or integrations with third-party signature providers.</p>
+    <p>By using such features, you agree that electronic signatures and electronic records may be used in connection with your documents.</p>
+    <p>You are solely responsible for:</p>
+    <ul>
+      <li>Contract content</li>
+      <li>Legal compliance</li>
+      <li>Required disclosures</li>
+      <li>Obtaining consent</li>
+    </ul>
+    <p>DoulaFlow does not provide legal advice and does not guarantee the enforceability of any document.</p>
+
+    <h2>11. HIPAA and Protected Health Information</h2>
+    <p>DoulaFlow is not marketed or offered as a HIPAA-compliant platform.</p>
+    <p>DoulaFlow does not provide a Business Associate Agreement ("BAA").</p>
+    <p>You agree not to upload, store, transmit, or process information through the Services where HIPAA compliance or a BAA is required by law or contract.</p>
+    <p>You are solely responsible for determining whether your use of the Services complies with applicable privacy laws, regulations, contracts, and professional obligations.</p>
+    <p>Without limiting the foregoing, you may not use DoulaFlow to process Protected Health Information requiring a Business Associate Agreement.</p>
+    <p>By creating an account, you affirmatively acknowledge and agree that you are not a HIPAA-covered entity using the Services in a manner that requires a BAA, and that you will not use the Services in any manner requiring HIPAA compliance. You may be asked to confirm this acknowledgment separately at the time of registration, and your acceptance there is in addition to, and does not replace, this provision.</p>
+
+    <h2>12. Privacy</h2>
+    <p>Your use of the Services is also governed by our <a class="link" href="/privacy-policy">Privacy Policy</a>.</p>
+    <p>The Privacy Policy explains how information is collected, used, and protected.</p>
+
+    <h2>13. Third-Party Services</h2>
+    <p>The Services may integrate with or depend upon third-party providers.</p>
+    <p>Such providers may include:</p>
+    <ul>
+      <li>Email services</li>
+      <li>Payment processors</li>
+      <li>Calendar providers</li>
+      <li>Electronic signature providers</li>
+      <li>Cloud hosting providers</li>
+    </ul>
+    <p>We are not responsible for outages, interruptions, policies, or actions of third-party services.</p>
+
+    <h2>14. Payments and Billing</h2>
+    <p>Paid subscriptions renew automatically unless cancelled.</p>
+    <p>You authorize us to charge the payment method associated with your account.</p>
+    <p>Failure to pay may result in suspension or termination of access.</p>
+    <p>Except where required by law, subscription fees are non-refundable.</p>
+    <p>You are responsible for applicable taxes associated with your use of the Services.</p>
+
+    <h2>15. Service Availability</h2>
+    <p>We strive to maintain reliable service but do not guarantee uninterrupted availability.</p>
+    <p>The Services are provided on an "as available" basis.</p>
+    <p>We may modify, suspend, or discontinue features at any time.</p>
+
+    <h2>16. Data Retention and Deletion</h2>
+    <p>Upon cancellation or termination, we may retain account data for a limited period to permit recovery or compliance with legal obligations.</p>
+    <p>After such period, data may be permanently deleted.</p>
+    <p>Users are responsible for exporting any data they wish to retain before cancellation.</p>
+
+    <h2>17. Intellectual Property</h2>
+    <p>The Services, including software, design, branding, logos, interfaces, and related intellectual property, are owned by Emberforge Works, LLC and protected by applicable laws.</p>
+    <p>No rights are granted except those expressly stated in these Terms.</p>
+
+    <h2>18. Feedback</h2>
+    <p>If you provide suggestions, ideas, feedback, or recommendations, you grant us the right to use such feedback without restriction or compensation.</p>
+
+    <h2>19. Termination</h2>
+    <p>We may suspend or terminate access at any time if:</p>
+    <ul>
+      <li>These Terms are violated</li>
+      <li>Payment obligations are not met</li>
+      <li>Security risks arise</li>
+      <li>Legal risks arise</li>
+      <li>Use of the Services creates operational risk</li>
+    </ul>
+    <p>You may terminate your account at any time.</p>
+
+    <h2>20. Disclaimer of Warranties</h2>
+    <p class="caps">THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE."</p>
+    <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+    <h2>21. Limitation of Liability</h2>
+    <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, EMBERFORGE WORKS, LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES.</p>
+    <p class="caps">OUR TOTAL LIABILITY FOR ANY CLAIM SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU TO DOULAFLOW DURING THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM.</p>
+
+    <h2>22. Indemnification</h2>
+    <p>You agree to defend, indemnify, and hold harmless Emberforge Works, LLC and its owners, employees, contractors, and affiliates from any claims, damages, liabilities, losses, costs, or expenses arising from:</p>
+    <ul>
+      <li>Your use of the Services</li>
+      <li>Your content</li>
+      <li>Your violation of these Terms</li>
+      <li>Your violation of applicable laws</li>
+      <li>Disputes between you and your clients</li>
+    </ul>
+
+    <h2>23. Governing Law</h2>
+    <p>These Terms shall be governed by and construed under the laws of the State of Tennessee, without regard to conflict-of-law principles.</p>
+    <p>Any dispute arising from or relating to these Terms or the Services shall be brought exclusively in the state or federal courts located in Hamilton County, Tennessee, and you consent to the jurisdiction of those courts.</p>
+
+    <h2>24. Geographic Availability</h2>
+    <p>The Services are intended for users located in the United States.</p>
+    <p>We do not currently offer or market the Services to residents of the European Union, United Kingdom, or other jurisdictions that impose regulatory requirements beyond those supported by the Services.</p>
+    <p>Users accessing the Services from outside the United States do so at their own risk and are responsible for compliance with local laws.</p>
+
+    <h2>25. Changes to Terms</h2>
+    <p>We may modify these Terms from time to time.</p>
+    <p>Material changes will be communicated through the Services or by email.</p>
+    <p>Continued use of the Services after changes become effective constitutes acceptance of the updated Terms.</p>
+
+    <h2>26. Severability</h2>
+    <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable, that provision shall be modified or severed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+    <h2>27. Assignment</h2>
+    <p>You may not assign or transfer these Terms, or any rights or obligations under them, without our prior written consent. We may assign or transfer these Terms, in whole or in part, without restriction, including in connection with a merger, acquisition, reorganization, or sale of all or substantially all of our assets. These Terms bind and benefit the parties and their permitted successors and assigns.</p>
+
+    <h2>28. Entire Agreement</h2>
+    <p>These Terms, together with the Privacy Policy and any plan-specific terms referenced herein, constitute the entire agreement between you and Emberforge Works, LLC regarding the Services and supersede all prior or contemporaneous agreements, understandings, or communications on that subject.</p>
+
+    <h2>29. No Waiver</h2>
+    <p>Our failure to enforce any provision of these Terms shall not constitute a waiver of that provision or of any other provision, and no waiver shall be effective unless made in writing.</p>
+
+    <h2>30. Contact Information</h2>
+    <p>Emberforge Works, LLC</p>
+    <p>Email: <a class="link" href="mailto:contact@mydoulaflow.com">contact@mydoulaflow.com</a></p>
+    <p>Chattanooga, Tennessee, USA</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="df-footer">
+  <div class="df-footer-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></div>
+  <div class="df-footer-links">
+    <a href="/#features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/about-us">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms-of-service">Terms</a>
+    <a href="https://app.mydoulaflow.com">Log in</a>
+  </div>
+  <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
+</footer>
+
+</body>
+</html>
