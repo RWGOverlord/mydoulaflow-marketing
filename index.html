@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DoulaFlow — Practice management for doulas</title>
-<meta name="description" content="DoulaFlow keeps every client, appointment, and document in one calm, beautiful place — practice-management software built for doulas." />
+<title>DoulaFlow — The practice platform built around birth work</title>
+<meta name="description" content="DoulaFlow — the practice platform built around birth work. On-call, labor, and postpartum stages, a pregnancy-aware client portal, and tools made for doulas." />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJJ382F1L0"></script>
 <script>
@@ -79,7 +79,7 @@
   .df-pain-item p { font-size: 14px; color: #e8ddd5; margin: 0; line-height: 1.5; font-weight: 300; }
 
   .df-pricing { padding: 4rem 2.5rem; background: #faf6f1; }
-  .df-pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; max-width: 580px; margin: 0 auto; }
+  .df-pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 380px; margin: 0 auto; }
   .df-price-card { background: #fff; border: 1px solid #e8ddd5; border-radius: 16px; padding: 2rem; }
   .df-price-card.featured { border: 2px solid #5c2d3e; }
   .df-price-tag { font-size: 11px; background: #f0e8e2; color: #5c2d3e; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: 500; }
@@ -88,8 +88,8 @@
   .df-price-amount span { font-size: 15px; font-weight: 300; color: #7d5360; }
   .df-price-desc { font-size: 13px; color: #7d5360; margin-bottom: 1.5rem; font-weight: 300; }
   .df-price-features { list-style: none; padding: 0; margin: 0 0 1.5rem; }
-  .df-price-features li { font-size: 14px; color: #6b4a52; padding: 5px 0; display: flex; align-items: center; gap: 8px; font-weight: 300; }
-  .df-price-features li i { font-size: 15px; color: #5c2d3e; }
+  .df-price-features li { font-size: 14px; color: #6b4a52; padding: 5px 0; display: flex; align-items: flex-start; gap: 8px; font-weight: 300; }
+  .df-price-features li i { font-size: 15px; color: #5c2d3e; line-height: 1.5; }
   .df-price-btn { width: 100%; padding: 12px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; border: none; }
   .df-price-btn.primary { background: #5c2d3e; color: #faf6f1; }
   .df-price-btn.ghost { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; }
@@ -122,10 +122,20 @@
   .df-demo-frame { max-width: 860px; margin: 1.5rem auto 0; border-radius: 16px; overflow: hidden; border: 1px solid #e8ddd5; box-shadow: 0 14px 44px rgba(92,45,62,0.14); background: #2c1a1a; line-height: 0; }
   .df-demo-frame video { width: 100%; display: block; }
 
+  .df-portal { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; background: #faf6f1; padding-top: 4rem; padding-bottom: 4rem; }
+  .df-portal-title { font-family: 'Playfair Display', serif; font-size: 32px; line-height: 1.2; color: #2c1a1a; margin: 0.5rem 0 1rem; font-weight: 400; }
+  .df-portal-title em { color: #5c2d3e; font-style: italic; }
+  .df-portal-sub { font-size: 16px; line-height: 1.65; color: #6b4a52; font-weight: 300; margin-bottom: 1.5rem; }
+  .df-portal-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .df-portal-list li { font-size: 14px; color: #5c2d3e; display: flex; align-items: center; gap: 10px; font-weight: 400; }
+  .df-portal-list li i { font-size: 18px; }
+  .df-portal-visual { display: flex; align-items: center; justify-content: center; }
+  .df-portal-mock { background: #fff; border-radius: 14px; border: 1px solid #e8ddd5; width: 100%; max-width: 300px; overflow: hidden; box-shadow: 0 8px 32px rgba(92,45,62,0.10); }
+
   /* Center content at 1120px like the rest of the site (full-bleed backgrounds, centered content) */
   .df-nav,
   .df-trust,
-  .df-features, .df-pain, .df-pricing, .df-cta, .df-demo, .df-footer {
+  .df-features, .df-pain, .df-pricing, .df-cta, .df-demo, .df-portal, .df-footer {
     padding-left: max(2.5rem, calc((100% - 1120px) / 2));
     padding-right: max(2.5rem, calc((100% - 1120px) / 2));
   }
@@ -162,6 +172,7 @@
 
     .df-trust { padding: 1rem 1.25rem; }
     .df-features, .df-pain, .df-pricing, .df-cta, .df-demo { padding: 2.75rem 1.25rem; }
+    .df-portal { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.75rem 1.25rem; }
     .df-section-title { font-size: 26px; }
     .df-pain .df-section-title { font-size: 24px; }
 
@@ -204,9 +215,9 @@
 
   <section id="hero" class="df-hero">
     <div class="df-hero-left">
-      <p class="df-eyebrow">Practice management for doulas</p>
-      <h1 class="df-h1">Your practice,<br><em>finally organized.</em></h1>
-      <p class="df-subhead">Stop juggling notebooks, Google Drive folders, and sticky notes. DoulaFlow keeps every client, appointment, and document in one calm, beautiful place.</p>
+      <p class="df-eyebrow">The operating system for doula practices</p>
+      <h1 class="df-h1">Built around <em>birth</em>,<br>not a sales funnel.</h1>
+      <p class="df-subhead">From first inquiry through on-call, labor, and postpartum — DoulaFlow is the only practice platform that actually knows what a doula's week looks like. Your clients, your calendar, your births, all in one calm place.</p>
       <div class="df-hero-actions">
         <a href="#waitlist" class="df-btn-primary">Request A Demo</a>
         <a href="#features" class="df-btn-ghost">See how it works</a>
@@ -248,6 +259,35 @@
     <p>Built by a doula's family · Tested in a real practice · Made in Chattanooga, TN</p>
   </div>
 
+  <section class="df-portal">
+    <div class="df-portal-text">
+      <p class="df-section-label">For your clients</p>
+      <h2 class="df-portal-title">A portal that makes your clients feel <em>cared for</em>.</h2>
+      <p class="df-portal-sub">Every client gets their own private, mobile-friendly space — their appointments, their documents, and a sweet week-by-week look at how baby is growing ("about the size of a jicama — week 32 of 40"). It's the kind of experience that makes a solo doula look established, and it's something most doula tools simply don't have.</p>
+      <ul class="df-portal-list">
+        <li><i class="ti ti-baby-carriage" aria-hidden="true"></i> Week-by-week pregnancy tracker</li>
+        <li><i class="ti ti-device-mobile" aria-hidden="true"></i> Beautiful on a phone</li>
+        <li><i class="ti ti-lock" aria-hidden="true"></i> Private to each client</li>
+      </ul>
+    </div>
+    <div class="df-portal-visual">
+      <!-- Replace with a real portal/tracker screenshot when ready: images/portal-tracker.png -->
+      <div class="df-portal-mock">
+        <div class="df-mock-header"><div class="df-mock-logo">Your practice</div></div>
+        <div style="padding:18px 16px;text-align:center;">
+          <div style="font-size:12px;color:#7d5360;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Week 32 of 40</div>
+          <div style="width:96px;height:96px;border-radius:50%;background:#f0e8e2;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;"><i class="ti ti-baby-carriage" style="font-size:42px;color:#5c2d3e;"></i></div>
+          <div style="font-size:15px;font-weight:500;color:#2c1a1a;margin-bottom:4px;">About the size of a jicama</div>
+          <div style="font-size:13px;color:#7d5360;">Due August 12 · 8 weeks to go</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="df-trust">
+    <p><i class="ti ti-shield-lock" aria-hidden="true" style="color:#5c2d3e;margin-right:6px;"></i> Your clients' information is private, encrypted, and access-controlled — and never sold. You stay in control of your practice's data.</p>
+  </div>
+
   <section class="df-pain">
     <p class="df-section-label">Sound familiar?</p>
     <h2 class="df-section-title">The paper-and-Google-Drive struggle is real</h2>
@@ -266,9 +306,9 @@
     <p class="df-section-sub">Built for solo doulas and small practices. No 40-page onboarding guide required.</p>
     <div class="df-grid">
       <div class="df-card">
-        <div class="df-card-icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
-        <h3>Client portal</h3>
-        <p>Give clients their own private space for appointments, documents, and a sweet week-by-week look at baby's growth. A touch most doula tools simply don't have.</p>
+        <div class="df-card-icon"><i class="ti ti-timeline-event" aria-hidden="true"></i></div>
+        <h3>A pipeline built for birth</h3>
+        <p>Onboarding → Active → On Call → In Labor → Postpartum. Your clients move through the stages a doula actually works in — not a generic "lead / customer" sales funnel. Your CRM finally speaks your language.</p>
       </div>
       <div class="df-card">
         <div class="df-card-icon"><i class="ti ti-messages" aria-hidden="true"></i></div>
@@ -302,8 +342,8 @@
       </div>
       <div class="df-card">
         <div class="df-card-icon"><i class="ti ti-receipt" aria-hidden="true"></i></div>
-        <h3>Invoicing</h3>
-        <p>Generate and send professional invoices directly from the app. No more manual PDF exports.</p>
+        <h3>Invoicing, your way</h3>
+        <p>Build professional invoices and track what's paid — with online payments through your own Stripe or PayPal coming soon. DoulaFlow never holds or processes your money. It's your practice, and your account.</p>
       </div>
       <div class="df-card">
         <div class="df-card-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
@@ -333,33 +373,20 @@
       <button data-period="annual" onclick="dfSetBilling('annual')">Annual <span class="df-save-badge">2 MONTHS FREE</span></button>
     </div>
     <div class="df-pricing-grid">
-      <div class="df-price-card">
-        <div class="df-price-tag">Solo doula</div>
-        <div class="df-price-name">Essentials</div>
-        <div class="df-price-amount" data-monthly="$19<span>/month</span>" data-annual="$190<span>/year</span>">$19<span>/month</span></div>
-        <div class="df-price-desc">For independent practitioners</div>
-        <ul class="df-price-features">
-          <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited clients</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Calendar & scheduling</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Intake forms</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Client Messaging</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Documents & invoicing</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Reports</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> 50 signed documents / year</li>
-        </ul>
-        <button class="df-price-btn ghost" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Sign up for a demo</button>
-      </div>
       <div class="df-price-card featured">
-        <div class="df-price-tag">Practice / collective</div>
-        <div class="df-price-name">Practice</div>
+        <div class="df-price-tag">For your practice</div>
+        <div class="df-price-name">Essentials</div>
         <div class="df-price-amount" data-monthly="$29<span>/month</span>" data-annual="$290<span>/year</span>">$29<span>/month</span></div>
-        <div class="df-price-desc" data-monthly="Starts at 2 doulas &middot; +$10/mo per added doula" data-annual="Starts at 2 doulas &middot; +$100/yr per added doula">Starts at 2 doulas &middot; +$10/mo per added doula</div>
+        <div class="df-price-desc">Everything you need to run your practice</div>
         <ul class="df-price-features">
-          <li><i class="ti ti-check" aria-hidden="true"></i> Everything in Essentials</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Pay only for the seats you use</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Shared client records</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> Admin controls</li>
-          <li><i class="ti ti-check" aria-hidden="true"></i> 50 signed documents per doula / year</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Client portal with week-by-week pregnancy tracking</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Birth-stage tracking — onboarding through postpartum</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited clients & self-serve intake forms</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Calendar, scheduling & appointment types</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Messaging, documents & invoicing</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Practice insights & reports</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> E-signature for contracts (50 per doula/year)</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Add doulas anytime — <span class="df-seat-price" data-monthly="$15/seat per month" data-annual="$150/seat per year">$15/seat per month</span></li>
         </ul>
         <button class="df-price-btn primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Sign up for a demo</button>
       </div>
@@ -404,7 +431,7 @@
     document.querySelectorAll('.df-pricing-toggle button').forEach(function(b){
       b.classList.toggle('active', b.dataset.period === period);
     });
-    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-desc[data-monthly]').forEach(function(el){
+    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-desc[data-monthly], .df-seat-price[data-monthly]').forEach(function(el){
       el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
     });
   }
