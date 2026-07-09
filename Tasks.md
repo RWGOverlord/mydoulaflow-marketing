@@ -225,3 +225,56 @@ There are effectively **two post templates**: a polished one (the two real posts
 **Honest mobile-readiness take:** Contrary to the hunch, mobile is **largely NOT broken** — every page has a working hamburger nav at 820px and all multi-column grids collapse (feature 3→2→1, pricing/pain → 1col, about vgrid 4→2→1, blog pgrid 3→1), with no obvious horizontal-overflow traps. The real launch risks here are **content/consistency (drafts, brand name, thin blog) and accessibility (contrast, focus)**, not mobile layout.
 
 *Audit complete — stopping here per instructions. Awaiting switch to dev/implementation mode before any changes.*
+
+---
+
+## CC Task — Add "Start Free Trial" CTAs sitewide (self-serve signup launch) — 2026-07-03
+
+**Context.** DoulaFlow is opening **self-serve trial signup**. The app now has a public signup page at
+**`https://app.mydoulaflow.com/signup`** (doula-only account creation → free trial). The marketing site's
+only job is to *link* to it — **no forms, no Stripe, no auth logic here** (all of that lives in the app).
+The existing **demo / waitlist** lead flow (`#waitlist` form → `submitDemo()` → `api/lead.js`) **STAYS** as-is;
+it's a separate, still-wanted path for doulas who want a demo first. So: **keep demo, add trial.**
+
+**Already done on `index.html`** (done by hand — verify, don't redo):
+- **Nav** button → "Start Free Trial" → `/signup` (was "Request A Demo").
+- **Hero** → "Start Free Trial" primary; "Request A Demo" kept as a ghost; "See how it works" kept.
+- **Pricing card** → "Start Free Trial" primary + "Or request a demo" ghost (still scrolls to `#waitlist`).
+- The demo form + `submitDemo()` + `api/lead.js` are **untouched**.
+
+### 1. Propagate the nav "Start Free Trial" button to every other page
+These pages currently have only a **"Log in"** nav, no trial/demo CTA:
+`about-us.html`, `blog.html`, `terms-of-service.html`, `privacy-policy.html`, and **all `blog/*.html` posts**.
+Add the same trial button to each page's nav, next to "Log in":
+```html
+<a href="https://app.mydoulaflow.com/signup" class="df-nav-cta">Start Free Trial</a>
+```
+- **Match each page's own nav markup.** Each HTML file has its own inline `<style>`; the `.df-nav-cta`
+  button style may be defined only on `index.html`. On pages where it isn't, either copy the `.df-nav-cta`
+  rule into that page's `<style>` or reuse whatever CTA button class that page already has — the goal is a
+  visible filled button that matches the site, not a bare link. Keep "Log in" (→ `https://app.mydoulaflow.com`) as-is.
+- Mind the per-page nav differences called out in the audit (UX-07): some pages wrap nav in `.wrap`. Place
+  the button in the same nav-right group as "Log in".
+
+### 2. Consistency check (all pages)
+- Every primary CTA points at the **exact** URL `https://app.mydoulaflow.com/signup` — the **`app.`** subdomain
+  (NOT `portal.`, NOT root `mydoulaflow.com`). Signup is doula-only; the `app.` host is the doula-mode entry.
+- The demo path (`#waitlist` form on `index.html`) still works and is still reachable.
+- No page leads with "Request A Demo" as its *only* nav CTA anymore — trial leads, demo is secondary.
+
+### 3. (Optional) Footers
+Footer link sets already differ per page (audit UX-08). If you standardize footers, you *may* add a
+"Start Free Trial" link there too — not required for this task.
+
+### Acceptance
+- On every page: nav shows "Log in" **and** "Start Free Trial", and the trial button links to
+  `https://app.mydoulaflow.com/signup` and renders as a styled button (not an unstyled link).
+- `index.html` demo form still submits to `api/lead.js` (unchanged).
+- Buttons visually consistent with each page's existing nav.
+
+### ⚠️ Do NOT deploy until the app's signup is live
+These CTAs point at `app.mydoulaflow.com/signup`, which only works once the **DoulaFlow app** ships its
+signup batch (self-serve `/signup` + the server-side entitlement write-gate + trial expiry) **and** Supabase
+**"Confirm email" is turned OFF**. Deploying the marketing change earlier sends visitors to a signup that
+404s or provisions accounts before the gate is ready. **This marketing deploy is the LAST step, timed to the
+app opening the door — Erick coordinates the timing.** Build/commit the changes now; hold the deploy.

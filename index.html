@@ -86,6 +86,8 @@
   .df-price-name { font-family: 'Playfair Display', serif; font-size: 22px; color: #2c1a1a; margin-bottom: 0.25rem; font-weight: 400; }
   .df-price-amount { font-size: 36px; font-weight: 500; color: #5c2d3e; margin: 0.75rem 0 0.25rem; line-height: 1; }
   .df-price-amount span { font-size: 15px; font-weight: 300; color: #7d5360; }
+  .df-price-sub { font-size: 13px; color: #7d5360; margin: 0 0 0.5rem; font-weight: 300; min-height: 1.2em; }
+  .df-price-sub strong { color: #5c2d3e; font-weight: 600; }
   .df-price-desc { font-size: 13px; color: #7d5360; margin-bottom: 1.5rem; font-weight: 300; }
   .df-price-features { list-style: none; padding: 0; margin: 0 0 1.5rem; }
   .df-price-features li { font-size: 14px; color: #6b4a52; padding: 5px 0; display: flex; align-items: flex-start; gap: 8px; font-weight: 300; }
@@ -209,7 +211,7 @@
     <div class="df-nav-right">
       <button class="df-nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=this.closest('.df-nav');this.setAttribute('aria-expanded',n.classList.toggle('menu-open'))"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <a href="https://app.mydoulaflow.com" class="df-nav-login">Log in</a>
-      <a href="#waitlist" class="df-nav-cta">Request A Demo</a>
+      <a href="https://app.mydoulaflow.com/signup" class="df-nav-cta">Start Free Trial</a>
     </div>
   </nav>
 
@@ -219,7 +221,8 @@
       <h1 class="df-h1">Built around <em>birth</em>,<br>not a sales funnel.</h1>
       <p class="df-subhead">From first inquiry through on-call, labor, and postpartum — DoulaFlow is the only practice platform that actually knows what a doula's week looks like. Your clients, your calendar, your births, all in one calm place.</p>
       <div class="df-hero-actions">
-        <a href="#waitlist" class="df-btn-primary">Request A Demo</a>
+        <a href="https://app.mydoulaflow.com/signup" class="df-btn-primary">Start Free Trial</a>
+        <a href="#waitlist" class="df-btn-ghost">Request A Demo</a>
         <a href="#features" class="df-btn-ghost">See how it works</a>
       </div>
     </div>
@@ -377,6 +380,7 @@
         <div class="df-price-tag">For your practice</div>
         <div class="df-price-name">Essentials</div>
         <div class="df-price-amount" data-monthly="$29<span>/month</span>" data-annual="$290<span>/year</span>">$29<span>/month</span></div>
+        <div class="df-price-sub" data-monthly="Billed monthly" data-annual="Just <strong>$24/mo</strong>, billed annually &mdash; save $5/mo">Billed monthly</div>
         <div class="df-price-desc">Everything you need to run your practice</div>
         <ul class="df-price-features">
           <li><i class="ti ti-check" aria-hidden="true"></i> Client portal with week-by-week pregnancy tracking</li>
@@ -388,7 +392,8 @@
           <li><i class="ti ti-check" aria-hidden="true"></i> E-signature for contracts (50 per doula/year)</li>
           <li><i class="ti ti-check" aria-hidden="true"></i> Add doulas anytime — <span class="df-seat-price" data-monthly="$15/seat per month" data-annual="$150/seat per year">$15/seat per month</span></li>
         </ul>
-        <button class="df-price-btn primary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Sign up for a demo</button>
+        <a href="https://app.mydoulaflow.com/signup" class="df-price-btn primary" style="display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Start Free Trial</a>
+        <button class="df-price-btn ghost" style="margin-top:10px;" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Or request a demo</button>
       </div>
     </div>
   </section>
@@ -431,7 +436,7 @@
     document.querySelectorAll('.df-pricing-toggle button').forEach(function(b){
       b.classList.toggle('active', b.dataset.period === period);
     });
-    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-desc[data-monthly], .df-seat-price[data-monthly]').forEach(function(el){
+    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-sub[data-monthly], .df-price-desc[data-monthly], .df-seat-price[data-monthly]').forEach(function(el){
       el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
     });
   }
