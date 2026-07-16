@@ -222,7 +222,7 @@
       <p class="df-subhead">From first inquiry through on-call, labor, and postpartum — DoulaFlow is the only practice platform that actually knows what a doula's week looks like. Your clients, your calendar, your births, all in one calm place.</p>
       <div class="df-hero-actions">
         <a href="https://app.mydoulaflow.com/signup" class="df-btn-primary">Start Free Trial</a>
-        <a href="#waitlist" class="df-btn-ghost">Request A Demo</a>
+        <a href="/book-a-demo" class="df-btn-ghost">Request a Demo</a>
         <a href="#features" class="df-btn-ghost">See how it works</a>
       </div>
     </div>
@@ -393,28 +393,15 @@
           <li><i class="ti ti-check" aria-hidden="true"></i> Add doulas anytime — <span class="df-seat-price" data-monthly="$15/seat per month" data-annual="$150/seat per year">$15/seat per month</span></li>
         </ul>
         <a href="https://app.mydoulaflow.com/signup" class="df-price-btn primary" style="display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Start Free Trial</a>
-        <button class="df-price-btn ghost" style="margin-top:10px;" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Or request a demo</button>
+        <a href="/book-a-demo" class="df-price-btn ghost" style="margin-top:10px;display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Or book a demo</a>
       </div>
     </div>
   </section>
 
   <section id="waitlist" class="df-cta">
     <h2>See DoulaFlow in action</h2>
-    <p>Drop your email and we'll set up a personal demo and get you onboarded.</p>
-    <div id="demoForm">
-      <div class="df-name-row">
-        <input type="text" id="demoName" placeholder="Your name" autocomplete="name" />
-      </div>
-      <div class="df-email-row">
-        <input type="email" id="demoEmail" placeholder="your@email.com" autocomplete="email" />
-        <button id="demoBtn" onclick="submitDemo()">Request a demo</button>
-      </div>
-      <input type="text" id="demoHoneypot" name="website" style="display:none" tabindex="-1" autocomplete="off" />
-      <p class="df-form-err" id="demoErr"></p>
-    </div>
-    <div id="demoSuccess" style="display:none" class="df-cta-success">
-      <p>Thanks! We'll reach out shortly to set up your demo.</p>
-    </div>
+    <p>Book a 30-minute demo and we'll walk you through how DoulaFlow fits your practice. No pressure, no contracts.</p>
+    <a href="/book-a-demo" class="df-btn-primary" style="font-size:16px;padding:14px 30px;">Book a demo</a>
   </section>
 
   <footer class="df-footer">
@@ -439,33 +426,6 @@
     document.querySelectorAll('.df-price-amount[data-monthly], .df-price-sub[data-monthly], .df-price-desc[data-monthly], .df-seat-price[data-monthly]').forEach(function(el){
       el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
     });
-  }
-
-  async function submitDemo() {
-    var name     = document.getElementById('demoName').value.trim();
-    var email    = document.getElementById('demoEmail').value.trim();
-    var honeypot = document.getElementById('demoHoneypot').value;
-    var btn      = document.getElementById('demoBtn');
-    var err      = document.getElementById('demoErr');
-    err.textContent = '';
-    if (!name)  { err.textContent = 'Please enter your name.'; return; }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Please enter a valid email.'; return; }
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    try {
-      var r = await fetch('/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ formType: 'demo', name: name, email: email, website: honeypot })
-      });
-      if (!r.ok) throw new Error('bad status');
-      document.getElementById('demoForm').style.display = 'none';
-      document.getElementById('demoSuccess').style.display = 'block';
-    } catch (e) {
-      err.textContent = 'Something went wrong — please try again.';
-      btn.disabled = false;
-      btn.textContent = 'Request a demo';
-    }
   }
 </script>
 </body>
