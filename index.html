@@ -107,6 +107,23 @@
   .df-form-err { font-size: 13px; color: #9b4040; margin-top: 0.6rem; min-height: 1.4em; }
   .df-cta-success p { font-size: 17px; color: #5c2d3e; font-weight: 500; }
 
+  .df-faq { padding: 4rem 2.5rem; background: #faf6f1; border-top: 1px solid #e8ddd5; }
+  .df-faq-list { max-width: 720px; margin: 0 auto; }
+  .df-faq-group-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: #5c2d3e; margin: 2.25rem 0 1rem; }
+  .df-faq-group:first-child .df-faq-group-title { margin-top: 0; }
+  .df-faq details { background: #fff; border: 1px solid #e8ddd5; border-radius: 12px; margin-bottom: 0.75rem; }
+  .df-faq details[open] { border-color: #c4a0ac; }
+  .df-faq summary { list-style: none; cursor: pointer; padding: 1.05rem 1.25rem; font-size: 16px; font-weight: 500; color: #2c1a1a; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .df-faq summary::-webkit-details-marker { display: none; }
+  .df-faq summary::after { content: "+"; font-size: 22px; font-weight: 400; color: #5c2d3e; line-height: 1; flex-shrink: 0; }
+  .df-faq details[open] summary::after { content: "\2212"; }
+  .df-faq-answer { padding: 0 1.25rem 1.25rem; font-size: 15px; color: #6b4a52; font-weight: 300; line-height: 1.65; }
+  .df-faq-answer p { margin-bottom: 0.75rem; }
+  .df-faq-answer p:last-child { margin-bottom: 0; }
+  .df-faq-answer a { color: #5c2d3e; font-weight: 500; text-decoration: none; }
+  .df-faq-answer a:hover { text-decoration: underline; }
+  @media (max-width: 700px) { .df-faq { padding: 2.75rem 1.25rem; } }
+
   .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; background: #faf6f1; }
   .df-footer-logo { display: inline-flex; align-items: center; }
   .df-footer-logo img { height: 20px; width: auto; display: block; }
@@ -204,6 +221,7 @@
     <div class="df-nav-links" onclick="this.closest('.df-nav').classList.remove('menu-open')">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="/about-us">About</a>
       <a href="/blog">Blog</a>
       <a href="https://app.mydoulaflow.com" class="df-nav-ml">Log in</a>
@@ -395,6 +413,127 @@
         <a href="https://app.mydoulaflow.com/signup" class="df-price-btn primary" style="display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Start Free Trial</a>
         <a href="/book-a-demo" class="df-price-btn ghost" style="margin-top:10px;display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Or book a demo</a>
       </div>
+    </div>
+  </section>
+
+  <section id="faq" class="df-faq">
+    <p class="df-section-label">FAQ</p>
+    <h2 class="df-section-title">Questions doulas ask us</h2>
+    <div class="df-faq-list">
+
+      <div class="df-faq-group">
+        <h3 class="df-faq-group-title">Trust &amp; Security</h3>
+
+        <details>
+          <summary>Is DoulaFlow HIPAA compliant?</summary>
+          <div class="df-faq-answer">
+            <p>Short answer: no, and for most doulas, that's not the question that matters.</p>
+            <p>HIPAA applies to "covered entities": health plans, healthcare clearinghouses, and healthcare providers who bill insurance electronically. Most doulas in private practice aren't covered entities, because they're paid directly by their clients rather than billing insurance. If that's you, HIPAA likely doesn't apply to your practice at all.</p>
+            <p>What matters more is whether your clients' information is actually protected. It is, and you can read exactly how just below.</p>
+            <p>Where this does matter: if you bill Medicaid or insurance for your services, or you work somewhere whose systems already fall under HIPAA, then DoulaFlow isn't the right fit for that work. You'd need a Business Associate Agreement (BAA) with any software holding your clients' health information, and DoulaFlow doesn't offer a BAA and isn't HIPAA compliant. We'd rather you know that up front than find out later.</p>
+            <p>We're not lawyers and this isn't legal advice; your obligations depend on your practice. If you're unsure whether HIPAA applies to you, it's worth asking your certifying organization or an attorney.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How is my clients' information protected?</summary>
+          <div class="df-faq-answer">
+            <p>Every practice's data is completely isolated from every other practice's, enforced at the database level, not just in the app. Information is encrypted in transit and at rest, access is controlled per practice, and we never sell your data or your clients' data to anyone. Ever.</p>
+            <p>Your clients' information belongs to you and your clients. We just keep it safe and organized.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can other doulas see my clients?</summary>
+          <div class="df-faq-answer">
+            <p>No. Your practice is yours alone. Another doula using DoulaFlow cannot see your clients, your notes, your documents, or anything else in your practice. That isolation is enforced by the database itself, on every single request.</p>
+            <p>If you bring other doulas into your practice, you stay in control. As the account owner you decide who's on the team, which clients each doula is assigned, and who has admin access. Beyond your own practice, no other doula on DoulaFlow can see anything of yours.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens to my data if I cancel?</summary>
+          <div class="df-faq-answer">
+            <p>Your data is always yours. If you ever decide to cancel and you want a copy of everything to take with you, just <a href="mailto:contact@mydoulaflow.com">email us</a> and we'll get it to you: your clients, your documents, and your birth records.</p>
+            <p>No hoops, no hostage-taking. We're never going to lock up your practice's history to get you to pay. That's not how we want to earn your business.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="df-faq-group">
+        <h3 class="df-faq-group-title">Money</h3>
+
+        <details>
+          <summary>Do you take a cut of my client payments?</summary>
+          <div class="df-faq-answer">
+            <p>No. Never.</p>
+            <p>DoulaFlow never touches your money. Connect your own PayPal account, and every invoice you send gets a Pay button, right in the invoice PDF and in your client's portal. She taps it, and the money goes straight to you, in your account, with no percentage going anywhere. Your rates are yours and your income is yours.</p>
+            <p>Prefer to get paid the way you already do? That works too. DoulaFlow will still create and track your invoices; how you collect is entirely up to you.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there a contract? Can I cancel anytime?</summary>
+          <div class="df-faq-answer">
+            <p>No contract, no commitment, cancel whenever you want. Month to month, or save with annual.</p>
+            <p>If you cancel, you're never locked in and you never lose your history. Want a copy of your data? Just email us and we'll send it over (see above).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What does it cost?</summary>
+          <div class="df-faq-answer">
+            <p>$29/month for your practice, or $290/year (two months free). Adding another doula to your practice is $15/month per seat ($150/year).</p>
+            <p>Unlimited clients. No per-client fees, no setup fees, no surprises.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="df-faq-group">
+        <h3 class="df-faq-group-title">Product</h3>
+
+        <details>
+          <summary>What's the client portal? Do my clients need to pay or install anything?</summary>
+          <div class="df-faq-answer">
+            <p>The client portal is a private, mobile-friendly space you can give each client. She can see her appointments, her documents, and a week-by-week look at how baby is growing.</p>
+            <p>It's free for your clients, and there's nothing to install. It works in any web browser on any phone or computer. You just invite her by email, and she gets her own private login.</p>
+            <p>It's included in your subscription. Your clients never pay us anything.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there a mobile app?</summary>
+          <div class="df-faq-answer">
+            <p>Not yet, but it's in active development and coming to both iPhone and Android. We'll let you know when it's ready.</p>
+            <p>In the meantime, DoulaFlow is fully mobile-friendly and easy to use right from your phone's browser, so you can run your practice from anywhere today.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I import my existing client list?</summary>
+          <div class="df-faq-answer">
+            <p>It's in the works right now. We're building it so you can bring your clients over from a spreadsheet or another tool without retyping everything.</p>
+            <p>In the meantime, adding a client takes about a minute, and if you've got a long list, <a href="mailto:contact@mydoulaflow.com">email us</a>. We'd genuinely like to hear what you're switching from. It helps us build the right import, and we'll make sure you're taken care of.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>I'm a solo doula. Is this overkill?</summary>
+          <div class="df-faq-answer">
+            <p>No, solo practice is exactly who DoulaFlow is built for. It started as a tool for one doula (the founder's wife) running her own practice.</p>
+            <p>You don't have to use everything. Most doulas start with clients and their calendar, and grow into the rest when they need it.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>I work with other doulas. Does it scale?</summary>
+          <div class="df-faq-answer">
+            <p>Yes. Any DoulaFlow account can add doulas, with no separate team or organization plan to upgrade to. It's just $15/month per seat ($150/year), there's no limit on how many you add, and you only pay for the seats you use.</p>
+            <p>The account owner is the admin: you assign clients to the doulas on your team, control what each person can see, and can grant admin rights to others when you want the help. Everyone works in the same practice, with shared client records.</p>
+          </div>
+        </details>
+      </div>
+
     </div>
   </section>
 
