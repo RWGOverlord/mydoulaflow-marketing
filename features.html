@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJJ382F1L0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PJJ382F1L0');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Features — DoulaFlow</title>
+<meta name="description" content="The whole DoulaFlow product on one page, with real screens: the birth pipeline, self-serve onboarding, the client portal, getting paid, and adding doulas. See what it does and what it looks like." />
+<link rel="canonical" href="https://mydoulaflow.com/features" />
+<link rel="icon" type="image/png" href="images/Favicon32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #faf6f1; color: #2c1a1a; font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1.12; }
+  em { font-style: italic; color: #5c2d3e; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+  /* nav */
+  .df-nav-wrap { position: sticky; top: 0; z-index: 100; background: rgba(250,246,241,.88); backdrop-filter: blur(10px); border-bottom: 1px solid #e8ddd5; }
+  .df-nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .df-logo { display: inline-flex; align-items: center; }
+  .df-logo img { height: 30px; width: auto; display: block; }
+  .df-nav-links { display: flex; gap: 2rem; align-items: center; font-size: 14px; }
+  .df-nav-links a { color: #6b4a52; transition: color .2s; font-weight: 400; }
+  .df-nav-links a:hover, .df-nav-links a.active { color: #2c1a1a; }
+  .df-nav-links a.active { font-weight: 500; }
+  .df-nav-right { display: flex; gap: 0.75rem; align-items: center; }
+  .df-nav-login { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; padding: 9px 20px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; }
+  .df-nav-cta { background: #5c2d3e; color: #faf6f1; border: none; padding: 10px 22px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; }
+  .df-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: #5c2d3e; line-height: 0; }
+  .df-nav-ml { display: none; }
+
+  /* buttons */
+  .df-btn-primary { background: #5c2d3e; color: #faf6f1; border: none; padding: 14px 28px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; }
+  .df-btn-primary:hover { background: #4a2230; }
+  .df-btn-ghost { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; padding: 13px 24px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 400; cursor: pointer; text-decoration: none; display: inline-block; }
+  .df-btn-ghost:hover { background: #f0e8e2; }
+
+  /* hero */
+  .feat-hero { background: linear-gradient(180deg, #f0e8e2 0%, #faf6f1 100%); padding: 4.5rem 0 3rem; border-bottom: 1px solid #e8ddd5; }
+  .feat-eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #7d5360; font-weight: 500; margin-bottom: 0.9rem; }
+  .feat-hero h1 { font-size: clamp(38px, 5.2vw, 54px); line-height: 1.08; max-width: 16ch; margin-bottom: 1.1rem; }
+  .feat-hero .lede { font-size: 18px; line-height: 1.6; color: #6b4a52; max-width: 56ch; font-weight: 300; margin-bottom: 1.75rem; }
+  .feat-hero-ctas { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+  /* jump nav */
+  .jump { border-bottom: 1px solid #e8ddd5; background: #faf6f1; position: sticky; top: 68px; z-index: 90; }
+  .jump-in { display: flex; gap: 6px; padding: 12px 0; flex-wrap: wrap; align-items: center; }
+  .jump .j-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #a08c82; margin-right: 8px; }
+  .jump a { font-size: 13px; color: #6b4a52; padding: 7px 14px; border-radius: 50px; border: 1px solid transparent; }
+  .jump a:hover { background: #f0e8e2; border-color: #e8ddd5; color: #5c2d3e; }
+
+  /* clusters */
+  .cluster { padding: 5rem 0; border-bottom: 1px solid #e8ddd5; }
+  .cluster.alt { background: #f0e8e2; }
+  .cluster-in { display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 44px; align-items: center; }
+  .cluster.flip .cluster-in { direction: rtl; }
+  .cluster.flip .cluster-in > * { direction: ltr; }
+  .c-num { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: #7d5360; font-weight: 500; display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .c-num .dot { width: 5px; height: 5px; border-radius: 50%; background: #c4a0ac; }
+  .cluster h2 { font-size: clamp(26px, 3.4vw, 34px); line-height: 1.16; margin-bottom: 14px; color: #2c1a1a; }
+  .c-promise { font-size: 16.5px; line-height: 1.6; color: #6b4a52; font-weight: 300; margin: 0 0 22px; }
+  .c-list { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 13px; }
+  .c-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; line-height: 1.55; color: #6b4a52; font-weight: 300; }
+  .c-list li b { font-weight: 500; color: #2c1a1a; }
+  .c-list .tick { width: 20px; height: 20px; border-radius: 50%; background: #f0e8e2; flex: none; display: grid; place-items: center; margin-top: 1px; }
+  .cluster.alt .c-list .tick { background: #fff; }
+  .c-list .tick i { font-size: 12px; color: #5c2d3e; }
+  .c-foot { font-size: 13px; color: #7d5360; font-weight: 300; }
+
+  /* visual frames */
+  .visual { position: relative; }
+  .feat-tag { position: absolute; top: -11px; left: 16px; z-index: 3; font-size: 9.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; border-radius: 50px; padding: 5px 11px; }
+  .feat-tag.still { background: #f0e8e2; color: #5c2d3e; border: 1px solid #c4a0ac; }
+  .feat-tag.clip { background: #5c2d3e; color: #faf6f1; }
+  .feat-frame { background: #fff; border: 1px solid #e8ddd5; border-radius: 14px; overflow: hidden; box-shadow: 0 22px 44px -22px rgba(60,35,28,.28); }
+  .feat-frame-bar { background: #f7f0ea; border-bottom: 1px solid #e8ddd5; padding: 9px 12px; display: flex; align-items: center; gap: 7px; }
+  .d3 { width: 9px; height: 9px; border-radius: 50%; background: #e0d4c9; }
+  .feat-url { margin-left: 8px; background: #faf6f1; border: 1px solid #e8ddd5; border-radius: 50px; font-size: 10.5px; color: #7d5360; padding: 3px 12px; font-weight: 300; }
+
+  /* the actual shot area — aspect ratio is reserved so recorded media drops in with no layout shift */
+  .shot { position: relative; background: #f0e8e2; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+  .shot.desktop { aspect-ratio: 16 / 10; }
+  .shot img, .shot video { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .shot-ph { padding: 1.5rem; }
+  .shot-ph i { font-size: 30px; color: #c4a0ac; display: block; margin-bottom: 10px; }
+  .shot-ph .ph-t { font-weight: 500; color: #5c2d3e; font-size: 14px; margin-bottom: 3px; }
+  .shot-ph .ph-m { font-size: 12px; color: #7d5360; font-weight: 300; }
+
+  /* phone */
+  .phone { width: 272px; margin: 0 auto; border: 9px solid #2c1a1a; border-radius: 38px; overflow: hidden; background: #faf6f1; box-shadow: 0 26px 50px -22px rgba(60,35,28,.42); }
+  .phone .shot { aspect-ratio: 390 / 844; }
+
+  /* team band */
+  .band-sec { padding: 4.5rem 0; background: #faf6f1; border-bottom: 1px solid #e8ddd5; }
+  .band-card { background: #fff; border: 1px solid #e8ddd5; border-radius: 20px; padding: 2.4rem 2.5rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: center; }
+  .band-card h2 { font-size: 27px; margin-bottom: 12px; color: #2c1a1a; }
+  .band-card p { font-size: 15px; line-height: 1.6; color: #6b4a52; font-weight: 300; margin: 0 0 18px; }
+  .seat-strip { display: flex; flex-direction: column; gap: 10px; }
+  .seat { background: #faf6f1; border: 1px solid #e8ddd5; border-radius: 10px; padding: 12px 14px; display: flex; gap: 10px; align-items: center; }
+  .seat .av { width: 30px; height: 30px; border-radius: 50%; background: #f0e8e2; color: #5c2d3e; display: grid; place-items: center; font-size: 11px; font-weight: 600; flex: none; }
+  .seat b { font-size: 12.5px; font-weight: 500; display: block; line-height: 1.3; color: #2c1a1a; }
+  .seat span { font-size: 10.5px; color: #7d5360; font-weight: 300; }
+  .seat .role { margin-left: auto; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.6px; color: #5c2d3e; background: #f0e8e2; border-radius: 50px; padding: 3px 9px; }
+  .seat-add { background: #faf6f1; border: 1px dashed #c4a0ac; color: #7d5360; justify-content: center; font-size: 12px; font-weight: 300; }
+
+  /* section header (pricing) */
+  .df-section-label { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #7d5360; text-align: center; margin-bottom: 0.5rem; }
+  .df-section-title { font-family: 'Playfair Display', serif; font-size: 34px; text-align: center; color: #2c1a1a; margin: 0 auto 0.75rem; font-weight: 400; max-width: 500px; line-height: 1.25; }
+  .df-section-sub { font-size: 16px; color: #6b4a52; text-align: center; max-width: 440px; margin: 0 auto 3rem; line-height: 1.6; font-weight: 300; }
+
+  /* pricing (matches homepage) */
+  .df-pricing { padding: 5rem 2.5rem; background: #faf6f1; }
+  .df-pricing-toggle { display: flex; gap: 4px; background: #f0e8e2; border: 1px solid #e8ddd5; border-radius: 50px; padding: 4px; width: fit-content; margin: 0 auto 2.5rem; }
+  .df-pricing-toggle button { border: none; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #7d5360; padding: 8px 18px; border-radius: 50px; cursor: pointer; transition: background 0.2s, color 0.2s; display: flex; align-items: center; gap: 6px; }
+  .df-pricing-toggle button.active { background: #5c2d3e; color: #faf6f1; }
+  .df-save-badge { font-size: 10px; background: #c4a0ac; color: #3a1d29; padding: 2px 7px; border-radius: 20px; font-weight: 600; letter-spacing: 0.3px; }
+  .df-pricing-toggle button.active .df-save-badge { background: #faf6f1; color: #5c2d3e; }
+  .df-pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; max-width: 380px; margin: 0 auto; }
+  .df-price-card { background: #fff; border: 1px solid #e8ddd5; border-radius: 16px; padding: 2rem; }
+  .df-price-card.featured { border: 2px solid #5c2d3e; }
+  .df-price-tag { font-size: 11px; background: #f0e8e2; color: #5c2d3e; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-weight: 500; }
+  .df-price-name { font-family: 'Playfair Display', serif; font-size: 22px; color: #2c1a1a; margin-bottom: 0.25rem; font-weight: 400; }
+  .df-price-amount { font-size: 36px; font-weight: 500; color: #5c2d3e; margin: 0.75rem 0 0.25rem; line-height: 1; }
+  .df-price-amount span { font-size: 15px; font-weight: 300; color: #7d5360; }
+  .df-price-sub { font-size: 13px; color: #7d5360; margin: 0 0 0.5rem; font-weight: 300; min-height: 1.2em; }
+  .df-price-sub strong { color: #5c2d3e; font-weight: 600; }
+  .df-price-desc { font-size: 13px; color: #7d5360; margin-bottom: 1.5rem; font-weight: 300; }
+  .df-price-features { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+  .df-price-features li { font-size: 14px; color: #6b4a52; padding: 5px 0; display: flex; align-items: flex-start; gap: 8px; font-weight: 300; }
+  .df-price-features li i { font-size: 15px; color: #5c2d3e; line-height: 1.5; }
+  .df-price-btn { width: 100%; padding: 12px; border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; border: none; }
+  .df-price-btn.primary { background: #5c2d3e; color: #faf6f1; }
+  .df-price-btn.ghost { background: transparent; color: #5c2d3e; border: 1.5px solid #c4a0ac; }
+
+  /* final cta */
+  .final { background: #f0e8e2; padding: 4.5rem 0; text-align: center; border-top: 1px solid #e8ddd5; }
+  .final h2 { font-size: 30px; margin-bottom: 12px; color: #2c1a1a; }
+  .final p { font-size: 15.5px; color: #6b4a52; font-weight: 300; max-width: 52ch; margin: 0 auto 22px; line-height: 1.6; }
+
+  /* footer */
+  .df-footer { padding: 1.5rem 2.5rem; border-top: 1px solid #e8ddd5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #faf6f1; }
+  .df-footer-logo img { height: 20px; width: auto; display: block; }
+  .df-footer-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+  .df-footer-links a { font-size: 13px; color: #7d5360; }
+  .df-footer-links a:hover { color: #5c2d3e; }
+  .df-footer p { font-size: 12px; color: #7d5360; margin: 0; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #5c2d3e; outline-offset: 2px; }
+
+  @media (max-width: 940px) {
+    .cluster-in { grid-template-columns: 1fr; gap: 34px; }
+    .cluster.flip .cluster-in { direction: ltr; }
+    .band-card { grid-template-columns: 1fr; gap: 28px; }
+    .df-nav-toggle { display: inline-flex; align-items: center; }
+    .df-nav-login { display: none; }
+    .df-nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: rgba(250,246,241,0.98); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e8ddd5; padding: 0.5rem 0;
+      box-shadow: 0 12px 28px rgba(92,45,62,0.10);
+    }
+    .df-nav-wrap.menu-open .df-nav-links { display: flex; }
+    .df-nav-links a { padding: 0.9rem 1.5rem; font-size: 16px; }
+    .df-nav-ml { display: block; border-top: 1px solid #e8ddd5; margin-top: 0.4rem; padding-top: 1rem; }
+    .jump { position: static; }
+    .cluster, .band-sec, .df-pricing, .final, .feat-hero { padding-left: 0; padding-right: 0; }
+    .cluster, .band-sec, .df-pricing { padding-top: 3rem; padding-bottom: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="df-nav-wrap">
+  <div class="wrap">
+    <nav class="df-nav">
+      <a href="/" class="df-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></a>
+      <div class="df-nav-links" onclick="this.closest('.df-nav-wrap').classList.remove('menu-open')">
+        <a href="/features" class="active">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/about-us">About</a>
+        <a href="/blog">Blog</a>
+        <a href="https://app.mydoulaflow.com" class="df-nav-ml">Log in</a>
+      </div>
+      <div class="df-nav-right">
+        <button class="df-nav-toggle" aria-label="Menu" aria-expanded="false" onclick="var w=this.closest('.df-nav-wrap');this.setAttribute('aria-expanded',w.classList.toggle('menu-open'))"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <a href="https://app.mydoulaflow.com" class="df-nav-login">Log in</a>
+        <a href="https://app.mydoulaflow.com/signup" class="df-nav-cta">Start Free Trial</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO (price block removed) -->
+<section class="feat-hero">
+  <div class="wrap">
+    <div class="feat-eyebrow">Features</div>
+    <h1>Built around the way birth work <em>actually flows</em>.</h1>
+    <p class="lede">From the first prenatal visit to the last postpartum check-in, every screen is shaped to fit how a doula really works. Here's the whole thing, one section at a time.</p>
+    <div class="feat-hero-ctas">
+      <a class="df-btn-primary" href="https://app.mydoulaflow.com/signup">Start Free Trial</a>
+      <a class="df-btn-ghost" href="/book-a-demo">Book a 30-min demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- JUMP NAV -->
+<div class="jump">
+  <div class="wrap"><div class="jump-in">
+    <span class="j-label">Jump to</span>
+    <a href="#pipeline">The birth pipeline</a>
+    <a href="#onboarding">Onboarding a client</a>
+    <a href="#portal">The client portal</a>
+    <a href="#paid">Getting paid</a>
+    <a href="#team">Working with other doulas</a>
+    <a href="#pricing">Pricing</a>
+  </div></div>
+</div>
+
+<!-- CLUSTER 1 — PIPELINE (screenshot) -->
+<section class="cluster" id="pipeline">
+  <div class="wrap"><div class="cluster-in">
+    <div>
+      <div class="c-num"><span class="dot"></span>The birth pipeline</div>
+      <h2>Your clients move through <em>birth stages</em>, not a sales funnel.</h2>
+      <p class="c-promise">Onboarding, Active, On Call, In Labor, Postpartum. Every other CRM makes you translate your work into "lead" and "customer." This one already speaks it.</p>
+      <ul class="c-list">
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Gestation on every row.</b> Due date and current week, always visible. You never do the math again.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>One profile per client.</b> Details, appointments, notes, and documents together, not in three notebooks.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>A calendar that knows the difference</b> between a prenatal visit, a postpartum check-in, and a birth.</div></li>
+      </ul>
+      <p class="c-foot">Includes messaging: one thread per client, in the app, instead of scattered texts.</p>
+    </div>
+    <div class="visual">
+      <span class="feat-tag still">Screenshot · 01</span>
+      <div class="feat-frame">
+        <div class="feat-frame-bar"><span class="d3"></span><span class="d3"></span><span class="d3"></span><span class="feat-url">app.mydoulaflow.com/clients</span></div>
+        <div class="shot desktop">
+          <img src="images/features/clients-list.png" alt="DoulaFlow clients board showing Active, On Call, In Labor, and Postpartum stages" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CLUSTER 2 — ONBOARDING (video) -->
+<section class="cluster flip alt" id="onboarding">
+  <div class="wrap"><div class="cluster-in">
+    <div>
+      <div class="c-num"><span class="dot"></span>Onboarding a client</div>
+      <h2>Send a link. She fills it out. <em>It's already filed.</em></h2>
+      <p class="c-promise">No PDF to email, no retyping her answers into your system, no chasing. The intake form lands in her profile the moment she hits submit.</p>
+      <ul class="c-list">
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Self-serve intake.</b> One link, filled out on her phone, filed automatically.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Documents in one place.</b> Birth plans, contracts, forms: two clicks, not twenty.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>E-signature built in.</b> Contracts signed without a second subscription. 50 per doula per year.</div></li>
+      </ul>
+    </div>
+    <div class="visual">
+      <span class="feat-tag clip">Video · ~6s loop · 02</span>
+      <div class="feat-frame">
+        <div class="feat-frame-bar"><span class="d3"></span><span class="d3"></span><span class="d3"></span><span class="feat-url">app.mydoulaflow.com/clients/jessica-morgan</span></div>
+        <div class="shot desktop">
+          <video src="videos/onboarding.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Sending a client an intake form in DoulaFlow"></video>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CLUSTER 3 — PORTAL (mobile video) -->
+<section class="cluster" id="portal">
+  <div class="wrap"><div class="cluster-in">
+    <div>
+      <div class="c-num"><span class="dot"></span>The client portal</div>
+      <h2>The part that makes you look <em>established</em>.</h2>
+      <p class="c-promise">Every client gets her own private space: her appointments, her documents, and a week-by-week look at how baby is growing. Free for her, nothing to install, works in any browser.</p>
+      <ul class="c-list">
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Week-by-week tracking.</b> "About the size of a grapefruit at week 22 of 40."</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Your logo, not ours.</b> It reads as your practice, because it is.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Private to each client.</b> Isolation enforced at the database, on every request.</div></li>
+      </ul>
+      <p class="c-foot">Most doula tools simply don't have this.</p>
+    </div>
+    <div class="visual">
+      <span class="feat-tag clip">Video · ~7s loop · mobile · 03</span>
+      <div class="phone">
+        <div class="shot">
+          <video src="videos/portal.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Walkthrough of a client's DoulaFlow portal"></video>
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- CLUSTER 4 — GETTING PAID (screenshot) -->
+<section class="cluster flip alt" id="paid">
+  <div class="wrap"><div class="cluster-in">
+    <div>
+      <div class="c-num"><span class="dot"></span>Getting paid</div>
+      <h2>She taps Pay. The money goes <em>straight to you</em>.</h2>
+      <p class="c-promise">Connect your own PayPal and every invoice gets a Pay button, in the PDF and in her portal. DoulaFlow never holds or processes your money, and never takes a percentage of it. Not a reduced one. None.</p>
+      <ul class="c-list">
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Your account, your rates.</b> We're not in the payment path. Stripe support is coming.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Packages and usage.</b> Build your service packages, track what's been used per client.</div></li>
+        <li><span class="tick"><i class="ti ti-check"></i></span><div><b>Insights included.</b> Clients, revenue, activity, at a glance, not as a paid add-on.</div></li>
+      </ul>
+      <p class="c-foot">Prefer to collect the way you already do? DoulaFlow still builds and tracks the invoice.</p>
+    </div>
+    <div class="visual">
+      <span class="feat-tag still">Screenshot · her view · 04</span>
+      <div class="feat-frame">
+        <div class="feat-frame-bar"><span class="d3"></span><span class="d3"></span><span class="d3"></span><span class="feat-url">portal.mydoulaflow.com/invoices/inv-001</span></div>
+        <div class="shot desktop">
+          <img src="images/features/invoice.png" alt="A client's invoice in her DoulaFlow portal with a Pay with PayPal button" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- TEAM BAND -->
+<section class="band-sec" id="team">
+  <div class="wrap">
+    <div class="band-card">
+      <div>
+        <h2>Work with other doulas? Add a seat.</h2>
+        <p>No separate team plan, no upgrade to an "agency tier," no sales call. Add a doula for $15/month ($150/year), assign her clients, and take the seat off when the season changes. You stay the admin.</p>
+        <a class="df-btn-ghost" href="#pricing">See seat pricing</a>
+      </div>
+      <div class="seat-strip">
+        <div class="seat"><span class="av">CH</span><div><b>Camille Hart</b><span>Owner &amp; admin</span></div><span class="role">Owner</span></div>
+        <div class="seat"><span class="av">RF</span><div><b>Renee Ford</b><span>4 clients assigned</span></div><span class="role">Doula</span></div>
+        <div class="seat seat-add">+ Add a doula · $15/mo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING (matches homepage) -->
+<section class="df-pricing" id="pricing">
+  <p class="df-section-label">Pricing</p>
+  <h2 class="df-section-title">Simple, honest pricing</h2>
+  <p class="df-section-sub">No contracts. No surprise fees. Cancel anytime.</p>
+  <div class="df-pricing-toggle">
+    <button data-period="monthly" class="active" onclick="dfSetBilling('monthly')">Monthly</button>
+    <button data-period="annual" onclick="dfSetBilling('annual')">Annual <span class="df-save-badge">2 MONTHS FREE</span></button>
+  </div>
+  <div class="df-pricing-grid">
+    <div class="df-price-card featured">
+      <div class="df-price-tag">For your practice</div>
+      <div class="df-price-name">Essentials</div>
+      <div class="df-price-amount" data-monthly="$29<span>/month</span>" data-annual="$290<span>/year</span>">$29<span>/month</span></div>
+      <div class="df-price-sub" data-monthly="Billed monthly" data-annual="Just <strong>$24/mo</strong>, billed annually &mdash; save $5/mo">Billed monthly</div>
+      <div class="df-price-desc">Everything you need to run your practice</div>
+      <ul class="df-price-features">
+        <li><i class="ti ti-check" aria-hidden="true"></i> Client portal with week-by-week pregnancy tracking</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Birth-stage tracking — onboarding through postpartum</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Unlimited clients & self-serve intake forms</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Calendar, scheduling & appointment types</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Messaging, documents & invoicing</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Practice insights & reports</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> E-signature for contracts (50 per doula/year)</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Add doulas anytime — <span class="df-seat-price" data-monthly="$15/seat per month" data-annual="$150/seat per year">$15/seat per month</span></li>
+      </ul>
+      <a href="https://app.mydoulaflow.com/signup" class="df-price-btn primary" style="display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Start Free Trial</a>
+      <a href="/book-a-demo" class="df-price-btn ghost" style="margin-top:10px;display:block;box-sizing:border-box;text-align:center;text-decoration:none;">Or book a demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>Still deciding?</h2>
+    <p>Book 30 minutes and we'll walk through how DoulaFlow fits your practice. No pressure, no contracts.</p>
+    <a class="df-btn-primary" href="/book-a-demo">Book a demo</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="df-footer">
+  <div class="df-footer-logo"><img src="images/Logo_Vertical.png" alt="DoulaFlow"></div>
+  <div class="df-footer-links">
+    <a href="/features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/about-us">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/privacy-policy">Privacy</a>
+    <a href="/terms-of-service">Terms</a>
+    <a href="https://app.mydoulaflow.com">Log in</a>
+  </div>
+  <p>© 2026 Emberforge Works · Built with care in Chattanooga, TN</p>
+</footer>
+
+<script>
+  function dfSetBilling(period){
+    document.querySelectorAll('.df-pricing-toggle button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.period === period);
+    });
+    document.querySelectorAll('.df-price-amount[data-monthly], .df-price-sub[data-monthly], .df-price-desc[data-monthly], .df-seat-price[data-monthly]').forEach(function(el){
+      el.innerHTML = (period === 'annual') ? el.dataset.annual : el.dataset.monthly;
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,1 +1,4 @@
 .DS_Store
+
+# Source screen-recordings — keep local, ship the .mp4 exports
+*.mov
